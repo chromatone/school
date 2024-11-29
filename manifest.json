@@ -1,0 +1,56 @@
+{
+	"id": "CMS-v.0.0.2",
+	"name": "Creative Multimedia School",
+	"short_name": "CMS",
+	"description": "Your hub for innovative multimedia education and creative collaboration",
+	"start_url": "/",
+	"background_color": "#444",
+	"theme_color": "#444",
+	"display": "standalone",
+	"orientation": "any",
+	"display_override": ["window-controls-overlay", "minimal-ui", "standalone"],
+	"handle_links": "preferred",
+	"prefer_related_applications": false,
+	"categories": [
+		"creative school",
+		"creative multimedia",
+		"media school",
+		"multimedia education",
+		"chromatone"
+	],
+	"icons": [
+		{
+			"src": "./icon.jpg",
+			"sizes": "512x512",
+			"type": "image/jpg",
+			"purpose": "any"
+		},
+		{
+			"src": "./icon.jpg",
+			"sizes": "192x192",
+			"type": "image/jpg"
+		},
+		{
+			"src": "./icon.jpg",
+			"sizes": "48x48",
+			"type": "image/jpg"
+		}
+	],
+	"screenshots": [
+		{
+			"src": "./preview.png",
+			"type": "image/png",
+			"sizes": "1280x720",
+			"form_factor": "wide"
+		},
+		{
+			"src": "./preview-v.png",
+			"type": "image/png",
+			"sizes": "720x1280",
+			"form_factor": "narrow"
+		}
+	],
+	"launch_handler": {
+		"client_mode": ["focus-existing", "auto"]
+	}
+}
