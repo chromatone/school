@@ -8,5 +8,5 @@ home: true
 
 Space to grow multimedia creativity on the island
 
-- [School](./school/index.md)
-- [Studio](./studio/index.md)
+- [Courses](./courses/index.md)
+- [Classes](./classes/index.md)
