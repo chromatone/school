@@ -4,15 +4,10 @@ description: Weekly classes in ongoing courses
 ---
 
 <script setup>
-import { defineClientComponent } from 'vitepress'
+import CoursesList from './CoursesList.vue'
+</script>
 
-const CourseList = defineClientComponent(() => {
-  return import('../.vitepress/components/CourseList.vue')
-})
-
-  </script>
-
-<CourseList />
+<CoursesList />
 
 ### 4 ongoing courses
 

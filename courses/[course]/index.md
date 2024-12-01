@@ -3,6 +3,6 @@ dynamic: true
 title: Course
 ---
 
-Course
+## {{ $params.title }}
 
 <!-- @content -->

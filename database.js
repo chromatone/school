@@ -1,9 +1,6 @@
-import { createDirectus, rest, staticToken, readItem, readItems } from '@directus/sdk'
-import { loadEnv } from 'vitepress'
+import { createDirectus, rest, readItems } from '@directus/sdk'
 
-const env = loadEnv('', process.cwd())
-
-export const client = createDirectus('https://db.chromatone.center/').with(rest())
+export const client = createDirectus('https://schooldb.chromatone.center/').with(rest())
 
 export async function useItems(collection, query) {
   try {
@@ -12,6 +9,7 @@ export async function useItems(collection, query) {
     return items
   } catch (e) {
     console.log(e)
+    return []
   }
 }
 

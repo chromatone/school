@@ -1,5 +1,5 @@
 ---
-title: Creative Multimedia School
+title: Classes
 description: Weekly classes in ongoing courses
 ---
 
@@ -7,11 +7,9 @@ description: Weekly classes in ongoing courses
 import { defineClientComponent } from 'vitepress'
 
 const ClassList = defineClientComponent(() => {
-  return import('../.vitepress/components/ClassList.vue')
+  return import('./ClassList.vue')
 })
-
-import { data } from './classes.data'
 
 </script>
 
-<ClassList :list ="data" />
+<ClassList />

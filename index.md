@@ -2,6 +2,8 @@
 home: true
 ---
 
+**Chromatone**
+
 # Creative Multimedia School
 
 ## Place Collab, Phuket, Thailand
