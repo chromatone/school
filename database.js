@@ -4,9 +4,7 @@ export const client = createDirectus('https://schooldb.chromatone.center/').with
 
 export async function useItems(collection, query) {
   try {
-    const items = await client.request(readItems(collection, query))
-
-    return items
+    return await client.request(readItems(collection, query))
   } catch (e) {
     console.log(e)
     return []

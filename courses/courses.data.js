@@ -1,8 +1,6 @@
-import { useItems } from "../database"
+import { client } from "../database"
+import { readItems } from '@directus/sdk'
 
 export default {
-  async load() {
-    const tools = await useItems('courses', {})
-    return tools || []
-  }
+  load: async () => await client.request(readItems('courses', {}))
 }

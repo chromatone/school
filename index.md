@@ -14,7 +14,13 @@ import ClassSchedule from './ClassSchedule.vue'
 
 <ClassSchedule />
 
-Space to grow multimedia creativity on the island
+::: info
 
-- [Courses](./courses/index.md)
-- [Classes](./classes/index.md)
+## HELLO
+
+Space to grow multimedia **creativity** on the island
+
+:::
+
+- [Courses](./courses/index)
+- [Classes](./classes/index)
