@@ -6,7 +6,7 @@ import { createDirectus, rest, readItems } from '@directus/sdk'
 const classes = ref([])
 
 onMounted(async () => {
-  classes.value = await createDirectus(import.meta.env.VITE_DB_URL)
+  classes.value = await createDirectus('https://schooldb.chromatone.center/')
     .with(rest())
     .request(readItems('classes'))
 })
