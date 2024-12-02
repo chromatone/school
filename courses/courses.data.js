@@ -1,8 +1,8 @@
 import { createDirectus, rest, readItems } from '@directus/sdk'
-import { loadEnv } from 'vitepress'
+
 
 export default {
-  load: async () => await createDirectus(loadEnv('', process.cwd()).VITE_DB_URL)
+  load: async () => await createDirectus((process.env || import.meta.env).VITE_DB_URL)
     .with(rest())
     .request(readItems('courses', {}))
 }
