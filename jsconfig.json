@@ -23,6 +23,9 @@
 		"allowSyntheticDefaultImports": true,
 	},
 	"vueCompilerOptions": {
+		"vitePressExtensions": [
+			".md"
+		],
 		"plugins": [
 			"@vue/language-plugin-pug"
 		]

@@ -14,15 +14,6 @@ export default defineConfig({
   title: "Creative Multimedia School",
   description: "Your hub for innovative multimedia  education and creative collaboration",
   vite: {
-    base: './',
-    server: {
-      port: 5482,
-      strictPort: false,
-    },
-    preview: {
-      host: "0.0.0.0",
-      port: 55482
-    },
     plugins: [
       UnoCSS({
         transformers: [transformerDirectives()],
