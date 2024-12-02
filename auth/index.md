@@ -3,4 +3,11 @@ title: Auth
 description: User Authentication
 ---
 
-Student authentication
+<script setup>
+import { defineClientComponent } from 'vitepress'
+
+const AuthForm = defineClientComponent(() => import('./AuthForm.vue'))
+
+</script>
+
+<AuthForm />
