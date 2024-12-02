@@ -1,12 +1,14 @@
 <script setup async>
-import { useItems } from '../database'
 import { onMounted, ref } from 'vue';
 import { format } from 'date-fns';
+import { createDirectus, rest, readItems } from '@directus/sdk'
 
-const classes = ref('')
+const classes = ref([])
 
 onMounted(async () => {
-  classes.value = await useItems('classes');
+  classes.value = await createDirectus(import.meta.env.VITE_DB_URL)
+    .with(rest())
+    .request(readItems('classes'))
 })
 
 </script>

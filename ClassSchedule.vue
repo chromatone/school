@@ -2,12 +2,16 @@
 import { ref, computed, onMounted } from "vue";
 import { parseISO, startOfWeek, addDays, isSameDay, format, isFirstDayOfMonth } from "date-fns";
 
-import { useItems } from './database'
+import { createDirectus, rest, readItems } from '@directus/sdk'
+
+const client = createDirectus('https://schooldb.chromatone.center/').with(rest())
 
 const classes = ref('')
 
 onMounted(async () => {
-  classes.value = await useItems('classes');
+  classes.value = await client.request(readItems('classes', {
+    fields: ['*', 'course.*'],
+  }));
 })
 
 
@@ -30,11 +34,16 @@ const getClassesForDate = (date) =>
 </script>
 
 <template lang="pug">
-h2.text-2xl.mb-4.mt-8 Class Schedule starting {{ format(startDate, 'dd/MM/yy') }}
-.grid.grid-cols-7.gap-2.mb-8
+h2.text-2xl.mt-8 Class Schedule 
+h3.text-lg.mb-4 Starting {{ format(startDate, 'dd/MM/yy') }}
+
+.grid.grid-cols-7.gap-2.mb-8.not-prose.overflow-x-scroll
   .rounded.font-bold.bg-gray-900.p-2(v-for="day in ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']" :key="day") {{ day }}
   .rounded.border.p-2.border-green-500(v-for="date in calendarDates" :key="date" :class="{ 'border-4': isSameDay(date, Date.now()) }")
     .text-sm.font-semibold {{ format(date, 'dd') }} {{ isFirstDayOfMonth(date) ? format(date, 'MMM') : '' }}
     ul(v-if="classes")
-      li.text-sm(v-for="cls in getClassesForDate(date)" :key="cls.title")  {{ format(parseISO(cls.date), 'HH:mm') }} -  {{ cls.title }} 
+      li.text-sm(v-for="cls in getClassesForDate(date)" :key="cls.title")  
+        .text-sm {{ format(parseISO(cls.date), 'HH:mm') }}  
+        .text-sm {{ cls.course.title }}
+        .text-lg {{ cls.title }}
 </template>

@@ -6,9 +6,7 @@ description: Weekly classes in ongoing courses
 <script setup>
 import { defineClientComponent } from 'vitepress'
 
-const ClassList = defineClientComponent(() => {
-  return import('./ClassList.vue')
-})
+const ClassList = defineClientComponent(() => import('./ClassList.vue'))
 
 </script>
 
