@@ -3,7 +3,7 @@ home: true
 ---
 
 <script setup>
-import ClassSchedule from './ClassSchedule.vue'
+import ClassSchedule from './classes/ClassSchedule.vue'
 </script>
 
 **Chromatone**
