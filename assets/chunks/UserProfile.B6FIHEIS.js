@@ -1,1 +1,0 @@
-import{u as r}from"./useUser.Bj8v2yr9.js";import{o,c as a,d as s,t as l,a as n}from"./framework.oynKXNHA.js";import"./index.DDtVt8tl.js";const c={class:"flex flex-col gap-2"},_={__name:"UserProfile",setup(p){const{user:t}=r();return(i,e)=>(o(),a("div",c,[e[0]||(e[0]=s("div",{class:"text-xl"},"USER",-1)),s("pre",null,l(n(t)),1)]))}};export{_ as default};
