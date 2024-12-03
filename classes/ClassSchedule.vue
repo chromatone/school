@@ -42,9 +42,9 @@ h3.text-lg.mb-4 Starting {{ format(startDate, 'dd/MM/yy') }}
   .rounded.border.p-2.border-green-500(v-for="date in calendarDates" :key="date" :class="{ 'border-4': isSameDay(date, Date.now()) }")
     .text-sm.font-semibold {{ format(date, 'dd') }} {{ isFirstDayOfMonth(date) ? format(date, 'MMM') : '' }}
     ul(v-if="classes")
-      li.text-sm(v-for="cls in getClassesForDate(date)" :key="cls.title")  
+      li.text-sm(v-for="cls in getClassesForDate(date)" :key="cls.title")
         a(:href="`/class/#${cls.id}`")
           .text-sm {{ format(parseISO(cls.date), 'HH:mm') }}  
-          .text-sm {{ cls.course.title }}
-          .text-lg {{ cls.title }}
+          .text-sm.font-bold {{ cls.course.title }}
+          //- .text-lg {{ cls.title }}
 </template>
