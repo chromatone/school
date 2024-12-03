@@ -43,7 +43,8 @@ h3.text-lg.mb-4 Starting {{ format(startDate, 'dd/MM/yy') }}
     .text-sm.font-semibold {{ format(date, 'dd') }} {{ isFirstDayOfMonth(date) ? format(date, 'MMM') : '' }}
     ul(v-if="classes")
       li.text-sm(v-for="cls in getClassesForDate(date)" :key="cls.title")  
-        .text-sm {{ format(parseISO(cls.date), 'HH:mm') }}  
-        .text-sm {{ cls.course.title }}
-        .text-lg {{ cls.title }}
+        a(:href="`/class/#${cls.id}`")
+          .text-sm {{ format(parseISO(cls.date), 'HH:mm') }}  
+          .text-sm {{ cls.course.title }}
+          .text-lg {{ cls.title }}
 </template>
