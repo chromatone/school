@@ -6,8 +6,11 @@ description: User settings
 <script setup>
 import { defineClientComponent } from 'vitepress'
 
-const UserProfile = defineClientComponent(() => import('./UserProfile.vue'))
+const StudentProfile = defineClientComponent(() => import('./StudentProfile.vue'))
 
+import AuthForm from './AuthForm.vue'
 </script>
 
-<UserProfile />
+<AuthForm />
+
+<StudentProfile />

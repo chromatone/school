@@ -1,6 +1,6 @@
 <script setup>
 import { useData } from 'vitepress'
-import AuthForm from './AuthForm.vue';
+import AuthForm from '../../student/AuthForm.vue';
 import { ref } from 'vue';
 
 const { frontmatter: f } = useData()

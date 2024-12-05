@@ -12,8 +12,6 @@ import ClassSchedule from './classes/ClassSchedule.vue'
 
 ## Place Collab, Phuket, Thailand
 
-<ClassSchedule />
-
 Space to grow multimedia **creativity** on the island
 
 - [Courses](./courses/index)

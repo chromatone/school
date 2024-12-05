@@ -10,7 +10,7 @@ const classes = ref('')
 
 onMounted(async () => {
   classes.value = await client.request(readItems('classes', {
-    fields: ['*', 'course.*'],
+    fields: ['*', 'course.level', 'course.program.title'],
   }));
 })
 
@@ -45,6 +45,6 @@ h3.text-lg.mb-4 Starting {{ format(startDate, 'dd/MM/yy') }}
       li.text-sm(v-for="cls in getClassesForDate(date)" :key="cls.title")
         a(:href="`/class/#${cls.id}`")
           .text-sm {{ format(parseISO(cls.date), 'HH:mm') }}  
-          .text-sm.font-bold {{ cls.course.title }}
+          .text-sm.font-bold {{ cls.course.level }} {{ cls.course.program.title }}
           //- .text-lg {{ cls.title }}
 </template>

@@ -3,7 +3,7 @@ import { computed, onMounted, ref } from 'vue';
 import { format } from 'date-fns';
 import { createDirectus, rest, readItems, readItem, createItem } from '@directus/sdk'
 import { useHash } from './useHash';
-import { useUser } from '../.vitepress/theme/useUser';
+import { useUser } from '../use/useUser';
 import { computedAsync } from '@vueuse/core';
 
 const { hash } = useHash()

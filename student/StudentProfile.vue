@@ -1,5 +1,5 @@
 <script setup>
-import { useUser } from '../.vitepress/theme/useUser';
+import { useUser } from '../use/useUser';
 
 const { user } = useUser()
 </script>
