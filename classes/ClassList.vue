@@ -30,7 +30,7 @@ onMounted(async () => {
 .flex.flex-col.gap-4.py-8
   transition-group(name="fade")
     .i-la-spinner.text-4xl.animate-spin.absolute(v-if="classes.length == 0" key="spinner")
-    a.no-underline.shadow-lg.p-4.text-xl.flex.flex-col.rounded-xl.bg-dark-200.gap-2(v-for="cl in classes" :key="cl.id" :href="`/class/#${cl.id}`")
+    a.no-underline.shadow-lg.p-4.text-xl.flex.flex-col.rounded-xl.bg-dark-200.gap-2(v-for="cl in classes" :key="cl.id" :href="`#${cl.id}`")
       .flex.w-full 
         .text-xl {{ format(cl.date, ' HH:mm EEEE') }}
         .flex-1 

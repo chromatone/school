@@ -18,7 +18,7 @@ onMounted(async () => {
 // Calendar setup
 const startDate = ref(startOfWeek(new Date(), { weekStartsOn: 1 })); // Start on Monday
 const daysInWeek = 7;
-const weeksToDisplay = 4;
+const weeksToDisplay = 5;
 
 // Generate calendar dates
 const calendarDates = computed(() =>
@@ -43,7 +43,7 @@ h3.text-lg.mb-4 Starting {{ format(startDate, 'dd/MM/yy') }}
     .text-sm.font-semibold {{ format(date, 'dd') }} {{ isFirstDayOfMonth(date) ? format(date, 'MMM') : '' }}
     ul(v-if="classes")
       li.text-sm(v-for="cls in getClassesForDate(date)" :key="cls.title")
-        a(:href="`/class/#${cls.id}`")
+        a(:href="`#${cls.id}`")
           .text-sm {{ format(parseISO(cls.date), 'HH:mm') }}  
           .text-sm.font-bold {{ cls.course.level }} {{ cls.course.program.title }}
           //- .text-lg {{ cls.title }}

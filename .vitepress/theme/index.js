@@ -1,6 +1,6 @@
 // https://vitepress.dev/guide/custom-theme
-import Layout from './Layout.vue'
-import './style.postcss'
+import Layout from '../../Layout.vue'
+import '../../style.postcss'
 
 import '@unocss/reset/tailwind.css'
 import 'virtual:uno.css'

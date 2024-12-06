@@ -14,5 +14,6 @@ import ClassSchedule from './classes/ClassSchedule.vue'
 
 Space to grow multimedia **creativity** on the island
 
+- [Programs](./programs/index)
 - [Courses](./courses/index)
 - [Classes](./classes/index)
