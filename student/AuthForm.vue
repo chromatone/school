@@ -4,7 +4,7 @@ import { useUser } from '../use/useUser';
 
 const email = ref('')
 const password = ref('')
-const exists = ref(false)
+const exists = ref(true)
 
 const { user, userDB, auth } = useUser()
 

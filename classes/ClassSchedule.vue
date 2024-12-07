@@ -30,7 +30,7 @@ const getClassesForDate = (date) =>
   classes.value.filter((cls) => isSameDay(parseISO(cls.date), date)
   );
 
-const hash = ref(window.location.hash.slice(1))
+const hash = ref('')
 
 onMounted(() => window.addEventListener('hashchange', () => hash.value = window.location.hash.slice(1))
 )

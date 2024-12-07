@@ -12,7 +12,7 @@ const { user } = useUser()
 </script>
 
 <template lang="pug">
-.flex.flex-col.p-4.w-full.items-center.h-full.justify-center.relative
+.flex.flex-col.p-4.w-full.h-full.justify-center.relative
   a.op-50(href="/" v-if="!f.home") Creative Multimedia School
   button.op-50.fixed.top-4.right-4.z-100.text-2xl.p-2.rounded-full.bg-dark-400(@click="auth = !auth")
 

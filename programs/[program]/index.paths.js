@@ -8,7 +8,7 @@ export default {
 
     const programs = await client.request(readItems('programs', {
       fields: [
-        '*'
+        '*', 'courses.*', 'courses.teacher.*'
       ]
     }))
 
