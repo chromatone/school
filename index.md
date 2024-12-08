@@ -28,4 +28,22 @@ And then I first felt those unique moments of joy when people play together in s
 
 Started in 2017 it all started as web development excercise app just to calculate the A 40th octave frequency and compare it to light spectrum. Now Chromatone is quite a developed research with plenty of theory and practice materials ready to be shared with people around.
 
-Online tutorship and courses are not that effective as we are so used to videos with no interaction with other students. It is a crucial part of real study. As a grownup you want effective education for student of any level of starting and achievable knowledge and skill. And I want to explore this field more by starting a small school with 4 programs to grow
+Online tutorship and courses are not that effective as we are so used to videos with no interaction with other students. It is a crucial part of real study. As a grownup you want effective education for student of any level of starting and achievable knowledge and skill. And I want to explore this field more by starting to grow a creative multimedia school with 4 programs to provide valuable knowledge and skills to both local and global communities of music explorers.
+
+Dynamic group education is an important part of study process as it provides opportunities to also ask questions and explain something to others so that you better understand the subject yourself.
+
+So, here's what we have now:
+
+- 1 month long courses
+- Weekly classes with creative homework
+- 4-8 students per course
+
+## Jam sessions
+
+### Biweekly jam workshops
+
+- 1 hour introduction
+- 2 hour jam session
+- Formats interchange
+  - Acoustic
+  - Electronic

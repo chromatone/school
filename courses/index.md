@@ -3,30 +3,22 @@ title: Creative Multimedia School
 description: Weekly classes in ongoing courses
 ---
 
-<script setup>
-import CoursesList from './CoursesList.vue'
-</script>
-
 ### 4 ongoing courses
 
 Themes of each class are cycling in a loop and students can get in on any stage to move in a spiral of growth from the very basics to advanced nuances of the same creative processes.
 
-<CoursesList />
+<script setup>
+import { defineClientComponent } from 'vitepress'
 
-### Weekly classes
+import CourseTimeline from './CourseTimeline.vue'
 
-1.5 hour session
+const CourseList = defineClientComponent(() => import('./CourseList.vue'))
+const CoursePage = defineClientComponent(() => import('./CoursePage.vue'))
 
-- 30 min presentation
-- 30 min exploration
-- 30 min collaboration
+</script>
 
-## Jam sessions
+<!-- <CourseTimeline /> -->
 
-### Biweekly jam workshops
+<!-- <CourseList /> -->
 
-- 1 hour introduction
-- 2 hour jam session
-- Formats interchange
-  - Acoustic
-  - Electronic
+<!-- <CoursePage /> -->
