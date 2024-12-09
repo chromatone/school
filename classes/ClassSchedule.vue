@@ -32,9 +32,11 @@ const getClassesForDate = (date) =>
 
 const hash = ref('')
 
-onMounted(() => window.addEventListener('hashchange', () => hash.value = window.location.hash.slice(1))
+const changeHash = () => hash.value = window.location.hash.slice(1)
+
+onMounted(() => window.addEventListener('hashchange', changeHash)
 )
-onUnmounted(() => window.removeEventListener('hashchange'))
+onUnmounted(() => window.removeEventListener('hashchange', changeHash))
 
 </script>
 

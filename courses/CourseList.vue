@@ -12,7 +12,7 @@ onMounted(async () => {
     uid: 'courses-list-sub',
     query: {
       sort: ['start_date'],
-      fields: ['*', 'program.*']
+      fields: ['*', 'program.title', 'classes.*']
     }
   })
 
@@ -38,5 +38,7 @@ onMounted(async () => {
         .text-xl Starts on {{ format(course.start_date, 'EEEE dd MMMM yyyy') }}
         .flex-1 
         .text-lg 
-      .text-xl.op-80 {{ course.classes_count }} classes, 4-8 students
+      .text-xl.op-80 {{ course.classes_count }} classes 
+      .flex.flex-col.gap-2
+        .p-2(v-for="cls in course?.classes" :key="cls") {{ format(cls.date, 'EEE dd-MMM-yyyy') }}
 </template>

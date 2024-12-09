@@ -7,6 +7,7 @@ const connected = ref(false)
 
 export function useWS() {
   onMounted(async () => {
+    if (connected.value) return
     await ws.connect()
     connected.value = true
   })
