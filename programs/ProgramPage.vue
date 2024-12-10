@@ -16,7 +16,7 @@ const { params } = useData()
   p.text-lg {{ $params.description }}
   h3.text-2xl Courses
   .flex.flex-col.gap-4
-    .p-2.rounded-xl.bg-dark-50.flex.flex-col.gap-2(v-for="course in $params.courses" :key="course") 
+    a.no-underline.p-2.rounded-xl.bg-dark-50.flex.flex-col.gap-2(v-for="course in $params.courses" :key="course" :href="`/courses/#${course.id}`") 
       .flex.flex-wrap.gap-4
         .text-lg {{ $params.title }} {{ course.level }}
         .flex-1

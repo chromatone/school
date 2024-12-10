@@ -3,6 +3,7 @@ import { ref, computed, onMounted, onUnmounted } from "vue";
 import { parseISO, startOfWeek, addDays, isSameDay, format, isFirstDayOfMonth } from "date-fns";
 
 import { createDirectus, rest, readItems } from '@directus/sdk'
+import { useHash } from "../use/useHash";
 
 const client = createDirectus('https://schooldb.chromatone.center/').with(rest())
 
@@ -30,13 +31,7 @@ const getClassesForDate = (date) =>
   classes.value.filter((cls) => isSameDay(parseISO(cls.date), date)
   );
 
-const hash = ref('')
-
-const changeHash = () => hash.value = window.location.hash.slice(1)
-
-onMounted(() => window.addEventListener('hashchange', changeHash)
-)
-onUnmounted(() => window.removeEventListener('hashchange', changeHash))
+const hash = useHash()
 
 </script>
 

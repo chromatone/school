@@ -5,12 +5,9 @@ import { createDirectus, rest, readItem, } from '@directus/sdk'
 
 import { useUser } from '../use/useUser';
 import { computedAsync } from '@vueuse/core';
+import { useHash } from '../use/useHash';
 
-const hash = ref(window.location.hash.slice(1))
-
-onMounted(() => window.addEventListener('hashchange', () => hash.value = window.location.hash.slice(1))
-)
-onUnmounted(() => window.removeEventListener('hashchange'))
+const hash = useHash()
 
 const clas = computedAsync(async () => hash.value && await createDirectus('https://schooldb.chromatone.center/')
   .with(rest())

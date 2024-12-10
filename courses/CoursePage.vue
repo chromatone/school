@@ -2,22 +2,18 @@
 import { onMounted, onUnmounted, ref } from 'vue';
 import { format } from 'date-fns';
 import { createDirectus, rest, readItem, } from '@directus/sdk'
+import { useTimeAgo } from '@vueuse/core'
 
 import { useUser } from '../use/useUser';
 import { computedAsync } from '@vueuse/core';
+import { useHash } from '../use/useHash';
 
-const hash = ref(window.location.hash.slice(1))
-
-const hashChange = () => hash.value = window.location.hash.slice(1)
-
-onMounted(() => window.addEventListener('hashchange', hashChange)
-)
-onUnmounted(() => window.removeEventListener('hashchange', hashChange))
+const hash = useHash()
 
 const course = computedAsync(async () => hash.value && await createDirectus('https://schooldb.chromatone.center/')
   .with(rest())
   .request(readItem('courses', hash.value, {
-    fields: ['*']
+    fields: ['*', 'program.title']
   })), [])
 
 const { user, userDB } = useUser()
@@ -30,12 +26,11 @@ transition(name="fade")
   .flex.flex-col.gap-4.sticky.mt-8.overflow-scroll.bottom-4.left-4.right-4.bg-dark-50.p-4.rounded-3xl(v-if="hash")
     a.p-4.rounded-full.bg-dark-200.absolute.top-2.right-2(href="#")
       .i-la-times
-    .flex.flex-wrap.gap-2
-      .text-lg {{ format(course.start_date || Date.now(), 'HH:mm EEEE dd MMMM yyyy') }}
     .flex.flex-wrap.gap-2.items-center
       .text-2xl.font-bold {{ course.program?.title }}
       .text-2xl  {{ course.level }}
-    .text-4xl {{ course?.program?.title }} 
+    .flex.flex-wrap.gap-2
+      .text-lg Starts {{ useTimeAgo(course.start_date) }}
     .flex.flex-wrap.gap-2.items-center
       img.rounded-full.w-30px.h-30px(
         v-if="course?.teacher?.avatar"
