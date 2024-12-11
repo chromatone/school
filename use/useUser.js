@@ -33,6 +33,11 @@ export function useUser() {
     user.value = await userDB.request(readMe())
   }
 
+  async function logout() {
+    await userDB.logout()
+    user.value = null
+  }
 
-  return { user, userDB, auth }
+
+  return { user, userDB, auth, logout }
 }

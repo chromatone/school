@@ -45,7 +45,7 @@ h3.text-lg.mb-4 Starting {{ format(startDate, 'dd/MM/yy') }}
     .text-sm.font-semibold {{ format(date, 'dd') }} {{ isFirstDayOfMonth(date) ? format(date, 'MMM') : '' }}
     ul(v-if="classes")
       li.text-sm.rounded.p-1(v-for="cls in getClassesForDate(date)" :key="cls.title" :class="{ 'bg-dark-500': cls.id == hash }")
-        a.flex.flex-col.gap-1.items-start(:href="`#${cls.id}`")
+        a.flex.flex-col.gap-1.items-start(:href="`/classes/#${cls.id}`")
           .text-sm {{ format(parseISO(cls.date), 'HH:mm') }}  
           .text-sm.font-bold {{ cls.course.program.title }}
           .px-2.bg-dark-500.bg-op-40.rounded-lg.text-xs {{ cls.course.level }} 

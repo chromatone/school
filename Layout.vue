@@ -9,7 +9,11 @@ const { frontmatter: f } = useData()
 const auth = ref(false)
 
 const { user } = useUser()
+
+
+import ClassSchedule from './classes/ClassSchedule.vue'
 </script>
+
 
 <template lang="pug">
 .flex.flex-col.p-4.w-full.h-full.justify-center.relative

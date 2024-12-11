@@ -15,6 +15,8 @@ import ProgramsList from './programs/ProgramsList.vue'
 
 <ProgramsList />
 
+<ClassSchedule />
+
 - [Courses](./courses/index)
 - [Classes](./classes/index)
 

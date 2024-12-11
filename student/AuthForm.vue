@@ -6,18 +6,21 @@ const email = ref('')
 const password = ref('')
 const exists = ref(true)
 
-const { user, userDB, auth } = useUser()
+const { user, userDB, auth, logout } = useUser()
 
 </script>
 
 <template lang='pug'>
-.p-4(v-if="user")
+.p-4.flex.flex-col.gap-2(v-if="user")
   .flex.gap-2.items-center.p-2
     img.rounded-full(:src="`https://schooldb.chromatone.center/assets/${user.avatar}?width=50&height=50`")
     .flex.flex-col
       .text-2xl {{ user.first_name }} {{ user.last_name }}
       .text-xs.op-50 {{ user.location }}
       //- .op-70.text-sm {{ user.email }}
+  .flex.flex-wrap.gap-2
+    a.no-underline.p-2.bg-dark-500.rounded-lg.hover-bg-dark-100(href="/student") My page
+    button.p-2.bg-dark-500.rounded-lg.hover-bg-dark-100(@click="logout()") Logout
 
 form.flex.flex-col.gap-4(@submit.prevent.stop="auth(exists, email, password)" v-else)
   h2.text-2xl {{ exists ? "Sign In" : 'Sign Up' }}
