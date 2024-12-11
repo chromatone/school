@@ -1,1 +1,0 @@
-import{r as o,o as s,x as t}from"./framework.NwtUIcuv.js";const n=o("");let a=!1;function i(){const e=()=>n.value=window.location.hash.slice(1);return a||(a=!0,s(()=>{e(),window.addEventListener("hashchange",e)}),t(()=>window.removeEventListener("hashchange",e))),n}export{i as u};
