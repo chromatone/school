@@ -1,0 +1,1 @@
+import{a as r}from"./theme.CVD2iZGf.js";import{b as a,d as o,e as s,t as l,u as n}from"./framework.B-l7dn_f.js";const c={class:"flex flex-col gap-2"},_={__name:"StudentProfile",setup(p){const{user:t}=r();return(u,e)=>(a(),o("div",c,[e[0]||(e[0]=s("div",{class:"text-xl"},"USER",-1)),s("pre",null,l(n(t)),1)]))}};export{_ as default};
