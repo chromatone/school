@@ -38,10 +38,9 @@ const hash = useHash()
       .text-2xl.flex.flex-wrap.items-baseline.gap-2 
         .op-70 {{ course.program.title }} 
         .px-2.py-1.bg-dark-800.rounded-lg.text-sm {{ course.level }}
-      .text-md.op-80 {{ course.classes_count }} classes 
       .flex.w-full 
         .text-sm Starts {{ useTimeAgo(course.start_date) }}
         .flex-1 
-        .text-lg 
+      button.p-2.rounded-xl.shadow.bg-dark-400 {{ course.classes_count }}  weekly classes - 2400 THB
 
 </template>

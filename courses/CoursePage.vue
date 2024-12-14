@@ -13,12 +13,10 @@ const client = createDirectus('https://schooldb.chromatone.center/')
   .with(rest())
 
 const course = computedAsync(async () => hash.value && await client.request(readItem('courses', hash.value, {
-  fields: ['*', 'program.title', 'classes.*', 'classes.module.title', 'teacher.*']
+  fields: ['*', 'program.title', 'classes.*', 'classes.module.title', 'teacher.*', 'enrollments.*']
 })), [])
 
 const { user, userDB } = useUser()
-
-const enrollments = computedAsync(async () => user.value && await client.request(readItems('enrollments')))
 
 </script>
 
@@ -40,8 +38,9 @@ transition(name="fade")
     .flex.flex-wrap.gap-2
       .text-lg Starts {{ useTimeAgo(course.start_date) }}
 
-    .flex.flex-wrap.gap-2(v-if="user")
-      .p-0 {{ enrollments }}
+    .flex.flex-col.gap-2(v-if="true")
+      .p-0 {{ course?.enrollments.length }}/{{ course?.capacity }} students enrolled 
+      .p-0 Need {{ course?.threshold }} to start course
 
     .flex.flex-col.gap-2
       a.no-underline.p-2.rounded-xl.bg-dark-700.flex.gap-2(v-for="(cls, c) in course?.classes" :key="cls" :href="`/classes/#${cls.id}`") 

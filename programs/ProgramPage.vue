@@ -26,6 +26,7 @@ const { params } = useData()
             :src="`https://schooldb.chromatone.center/assets/${course?.teacher?.avatar}?width=30&height=30`")
           .p-0 {{ course?.teacher?.first_name }} {{ course?.teacher?.last_name }}
       .text-sm Starts on {{ format(course?.start_date, 'EEEE dd MMMM yyyy') }}
+      button.p-2.rounded-xl.shadow.bg-dark-400 {{ course.classes_count }}  weekly classes - 2400 THB
       //- .text-xs {{ course }}
       //- .text-xs {{ $params }}
 </template>

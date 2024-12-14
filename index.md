@@ -20,7 +20,7 @@ import ProgramsList from './programs/ProgramsList.vue'
 - [Courses](./courses/index)
 - [Classes](./classes/index)
 
-### Grow your understanding of music and creative production while on the island
+### Improve your music skill and creative output while on the island
 
 <img class="" src="/photo.jpeg" />
 
