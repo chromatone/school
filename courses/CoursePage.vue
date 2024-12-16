@@ -39,7 +39,7 @@ transition(name="fade")
       .text-lg Starts {{ useTimeAgo(course.start_date) }}
 
     .flex.flex-col.gap-2(v-if="true")
-      .p-0 {{ course?.enrollments.length }}/{{ course?.capacity }} students enrolled 
+      .p-0 {{ course?.enrollments?.length }}/{{ course?.capacity }} students enrolled 
       .p-0 Need {{ course?.threshold }} to start course
 
     .flex.flex-col.gap-2
