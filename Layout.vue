@@ -10,8 +10,6 @@ const auth = ref(false)
 
 const { user } = useUser()
 
-
-import ClassSchedule from './classes/ClassSchedule.vue'
 </script>
 
 
@@ -27,11 +25,11 @@ import ClassSchedule from './classes/ClassSchedule.vue'
 
   h1.text-2xl {{ f.title }}
 
-  content.prose.max-w-unset
+  content.prose.max-w-unset.flex-1
 
   .flex.flex-wrap.gap-2.text-2xl.w-full
     a(href="/courses/") Courses
-    .flex-1
+    a.flex-1(href="/payments/") Payments
     a(href="/classes/") Classes
 </template>
 

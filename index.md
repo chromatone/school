@@ -20,9 +20,13 @@ const CourseList = defineClientComponent(() => import('./courses/CourseList.vue'
 
 ### Improve your music skill and creative output while on the island
 
-Hello! My name is Denis Starov. I'm the author and developer of Chromatone - the Visial Music Language. I'm bringing Isaac Newton's ideas to modern technology levels: now we can establish consistent relations between frequencies of sound and light with microphones, synthesizers, sequencers, screens, LEDs etc.
+Hello! My name is Denis Starov. I'm the author and developer of Chromatone - the Visial Music Language. I found a point where ideas of Isaac Newton meet modern technology and science. Now we can establish consistent relations between notes and colors and bring higher awareness to music analysis, performance, composition and production. The same note across octaves, frets and bars will have the same color and there's much benefit from it!
 
-Hundreds of students all around the world are already using my instrument stickers and interactive web-apps to study, practice and improve their music skills. But real face to face group education appears to be the core of human educational system. My 8+ years experience in music and multimedia production as well as personal music tutorship sessions show high educational potential of Chromatone system and my practical skills being shared with eager students. And group classes can become a gamechanger for many people - it's our primordial way of learning things and it may help overcome daily routine and find time to go study something interesting together with other people.
+Hundreds of students all around the world are already using our instrument stickers, printed memos and interactive web-apps to study, practice and improve their music skills. Real life face to face group study appears to be at the core of any human educational system. My 8+ years experience in self-guided music research and multimedia production as well as relative success of my first video-course on Visual Music Theory have shown high educational potential of Chromatone system. At some point I've discovered 4 main perspectives from which we can look at music and multimedia art together.
+
+Visual Music Theory helps understand at notes and scales, Collaborative Jam Performance is a way to enjoy implementing this knowledge with others, Live Multimedia Production focuses on recording and processing content while Creative Web-Development is about apps and their features.
+
+I will share my experience, help you build your own knowledge and plan of action to develop sufficient skills to use it creatively. You are free to use all this for your self-expression!
 
 <ProgramsList />
 
@@ -30,7 +34,7 @@ Hundreds of students all around the world are already using my instrument sticke
 
 <ClassSchedule />
 
-### My path to school
+### Visual Music School
 
 While being phenomenally different, sensations converge in our minds and there we can build any kinds of connections. It's where we start seeing music. That's how I studied music myself: with colorful stickers applied on the keyboard of my OP-1 and a memo cheatsheet with diagrams of all chords in basic diatonic scales to put at sight and go with all this to any rehearsal or jam place to start exploring this space with other musicians.
 
