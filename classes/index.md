@@ -5,11 +5,11 @@ description: Weekly classes in ongoing courses
 
 ### Weekly classes
 
-1 hour session
+1 hour group education session
 
 - 20 min presentation
 - 20 min discovery
-- 20 min performance
+- 20 min collaboration
 
 <script setup>
 import { defineClientComponent } from 'vitepress'

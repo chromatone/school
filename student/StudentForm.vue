@@ -41,6 +41,6 @@ form.flex.flex-col.gap-4.p-4(@submit.prevent="submit()")
 
 <style lang="postcss" scoped>
 input {
-  @apply p-2 rounded-xl bg-dark-400
+  @apply p-2 rounded-xl bg-light-400
 }
 </style>

@@ -22,8 +22,8 @@ const { user, userDB } = useUser()
 
 <template lang='pug'>
 transition(name="fade")
-  .flex.flex-col.gap-4.sticky.mt-8.overflow-scroll.bottom-4.left-4.right-4.bg-dark-50.p-4.rounded-3xl(v-if="hash")
-    a.p-4.rounded-full.bg-dark-200.absolute.top-2.right-2(href="#")
+  .flex.flex-col.gap-4.sticky.mt-8.overflow-scroll.bottom-4.left-4.right-4.bg-light-100.p-4.rounded-3xl(v-if="hash")
+    a.p-4.rounded-full.bg-light-200.absolute.top-2.right-2(href="#")
       .i-la-times
     .flex.flex-wrap.gap-2.items-center
       .text-2xl.font-bold {{ course.program?.title }}
@@ -43,7 +43,7 @@ transition(name="fade")
       .p-0 Need {{ course?.threshold }} to start course
 
     .flex.flex-col.gap-2
-      a.no-underline.p-2.rounded-xl.bg-dark-700.flex.gap-2(v-for="(cls, c) in course?.classes" :key="cls" :href="`/classes/#${cls.id}`") 
+      a.no-underline.p-2.rounded-xl.bg-light-700.flex.gap-2(v-for="(cls, c) in course?.classes" :key="cls" :href="`/classes/#${cls.id}`") 
         .op-50 {{ c + 1 }}.
         .op-100  {{ cls.module.title }}
         .op-60 {{ useTimeAgo(cls.date) }}

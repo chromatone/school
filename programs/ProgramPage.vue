@@ -16,7 +16,7 @@ const { params } = useData()
   p.text-lg {{ $params.description }}
   h3.text-2xl Courses
   .flex.flex-col.gap-4
-    a.no-underline.p-2.rounded-xl.bg-dark-50.flex.flex-col.gap-2(v-for="course in $params.courses" :key="course" :href="`/courses/#${course.id}`") 
+    a.no-underline.p-2.rounded-xl.bg-light-50.flex.flex-col.gap-2(v-for="course in $params.courses" :key="course" :href="`/courses/#${course.id}`") 
       .flex.flex-wrap.gap-4
         .text-lg {{ $params.title }} {{ course.level }}
         .flex-1
@@ -26,7 +26,7 @@ const { params } = useData()
             :src="`https://schooldb.chromatone.center/assets/${course?.teacher?.avatar}?width=30&height=30`")
           .p-0 {{ course?.teacher?.first_name }} {{ course?.teacher?.last_name }}
       .text-sm Starts on {{ format(course?.start_date, 'EEEE dd MMMM yyyy') }}
-      button.p-2.rounded-xl.shadow.bg-dark-400 {{ course.classes_count }}  weekly classes - 2400 THB
+      button.p-2.rounded-xl.shadow.bg-light-400 {{ course.classes_count }}  weekly classes - 2400 THB
       //- .text-xs {{ course }}
       //- .text-xs {{ $params }}
 </template>

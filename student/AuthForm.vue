@@ -19,8 +19,8 @@ const { user, userDB, auth, logout } = useUser()
       .text-xs.op-50 {{ user.location }}
       //- .op-70.text-sm {{ user.email }}
   .flex.flex-wrap.gap-2
-    a.no-underline.p-2.bg-dark-500.rounded-lg.hover-bg-dark-100(href="/student") My page
-    button.p-2.bg-dark-500.rounded-lg.hover-bg-dark-100(@click="logout()") Logout
+    a.no-underline.p-2.bg-light-500.rounded-lg.hover-bg-light-100(href="/student") My page
+    button.p-2.bg-light-500.rounded-lg.hover-bg-light-100(@click="logout()") Logout
 
 form.flex.flex-col.gap-4(@submit.prevent.stop="auth(exists, email, password)" v-else)
   h2.text-2xl {{ exists ? "Sign In" : 'Sign Up' }}
@@ -35,6 +35,6 @@ form.flex.flex-col.gap-4(@submit.prevent.stop="auth(exists, email, password)" v-
 
 <style scoped lang="postcss">
 input {
-  @apply p-2 bg-dark-500 rounded-lg
+  @apply p-2 bg-light-500 rounded-lg
 }
 </style>

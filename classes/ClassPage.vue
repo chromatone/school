@@ -6,6 +6,7 @@ import { createDirectus, rest, readItem, } from '@directus/sdk'
 import { useUser } from '../use/useUser';
 import { computedAsync } from '@vueuse/core';
 import { useHash } from '../use/useHash';
+import ContactMe from '../contact/ContactMe.vue';
 
 const hash = useHash()
 
@@ -32,11 +33,11 @@ async function join() {
 
 <template lang='pug'>
 transition(name="fade")
-  .flex.flex-col.gap-4.sticky.mt-8.overflow-scroll.bottom-4.left-4.right-4.bg-dark-50.p-4.rounded-3xl(v-if="hash")
-    a.p-4.rounded-full.bg-dark-200.absolute.top-2.right-2(href="#")
+  .flex.flex-col.gap-4.sticky.mt-8.overflow-scroll.bottom-4.left-4.right-4.bg-light-200.p-4.rounded-3xl(v-if="hash")
+    a.p-4.rounded-full.bg-light-200.absolute.top-2.right-2(href="#")
       .i-la-times
     .flex.flex-wrap.gap-2
-      .text-lg {{ format(clas.date || Date.now(), 'HH:mm EEEE dd MMMM yyyy') }}
+      .text-lg(v-if="clas.date") {{ format(clas.date, 'HH:mm EEEE dd MMMM yyyy') }}
     .flex.flex-wrap.gap-2.items-center
       .text-2xl.font-bold {{ clas?.course?.program?.title }}
       .text-2xl  {{ clas?.course?.level }}
@@ -47,7 +48,8 @@ transition(name="fade")
         :src="`https://schooldb.chromatone.center/assets/${clas?.course?.teacher?.avatar}?width=30&height=30`")
       .p-0 {{ clas?.course?.teacher?.first_name }} {{ clas?.course?.teacher?.last_name }}
     .text-xs(v-if="clas?.module?.description") {{ clas?.module?.description }} 
+    ContactMe
     .flex.flex-wrap.gap-2.p-2(v-if="data?.students")
-      .p-2.bg-dark-800.rounded-xl(v-for="student in data?.students" :key="student") {{ student.directus_users_id.first_name }} {{ student.directus_users_id.last_name }}
+      .p-2.bg-light-800.rounded-xl(v-for="student in data?.students" :key="student") {{ student.directus_users_id.first_name }} {{ student.directus_users_id.last_name }}
     button.p-2.shadow-lg.hover-brightness-150.hover-shadow-xl.bg-green-700.rounded-xl.font-bold.uppercase(@click="join()" v-if="user && !joined") Join
 </template>
