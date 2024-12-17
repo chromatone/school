@@ -4,7 +4,7 @@ import { onMounted, ref } from 'vue'
 
 const user = ref(null)
 
-const registered = ref(false)
+
 
 const userDB = createDirectus('https://schooldb.chromatone.center/')
   .with(authentication('cookie', { credentials: 'include', autoRefresh: true }))
@@ -18,6 +18,8 @@ export function useUser() {
       loadProfile()
     }
   })
+
+  const registered = ref(false)
 
   async function auth(exists, email, password) {
     if (!exists) {
@@ -39,5 +41,5 @@ export function useUser() {
   }
 
 
-  return { user, userDB, auth, logout }
+  return { user, userDB, auth, logout, registered }
 }

@@ -28,7 +28,7 @@ onClickOutside(authModal, () => {
     img.rounded-full(v-if="user?.avatar" :src="`https://schooldb.chromatone.center/assets/${user.avatar}?width=40&height=40`")
     .i-la-user(v-else)
   transition(name="fade")
-    AuthForm.bg-light-300.p-4.pt-8.pr-8.rounded-2xl.shadow-xl.fixed.top-4.right-4.z-90(v-show="auth" ref="authModal")
+    AuthForm.fixed.top-4.right-4.z-90(v-show="auth" ref="authModal")
 
   a.p-2.op-50(href="/" v-if="!f.home") Creative Multimedia School
 
