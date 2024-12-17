@@ -1,1 +1,0 @@
-import{r as o,o as a,Y as s}from"./framework.KJHvv_yO.js";function t(){const e=o(""),n=()=>e.value=window.location.hash.slice(1);return a(()=>{n(),window.addEventListener("hashchange",n)}),s(()=>window.removeEventListener("hashchange",n)),e}export{t as u};
