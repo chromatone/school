@@ -6,6 +6,7 @@ import { useUser } from '../use/useUser';
 import { computedAsync } from '@vueuse/core';
 import { useHash } from '../use/useHash';
 import { watch } from 'vue';
+import ContactMe from '../contact/ContactMe.vue';
 
 const hash = useHash()
 
@@ -22,7 +23,7 @@ const { user, userDB } = useUser()
 
 <template lang='pug'>
 transition(name="fade")
-  .flex.flex-col.gap-4.sticky.mt-8.overflow-scroll.bottom-4.left-4.right-4.bg-light-100.p-4.rounded-3xl(v-if="hash")
+  .mx-4.flex.flex-col.gap-2.sticky.mt-8.overflow-scroll.bottom-4.left-4.right-4.bg-light-100.p-4.rounded-3xl.max-w-45ch.max-h-90vh.relative(v-if="hash")
     a.p-4.rounded-full.bg-light-200.absolute.top-2.right-2(href="#")
       .i-la-times
     .flex.flex-wrap.gap-2.items-center
@@ -47,4 +48,6 @@ transition(name="fade")
         .op-50 {{ c + 1 }}.
         .op-100  {{ cls.module.title }}
         .op-60 {{ useTimeAgo(cls.date) }}
+
+    ContactMe For enrollment contact me via 
 </template>

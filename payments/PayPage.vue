@@ -54,9 +54,7 @@ const payments = computedAsync(async () => user.value && await userDB.request(re
     button.w-full.bg-orange-500.hover-bg-orange-300.transition.p-4.rounded-xl.font-bold.text-xl(type="submit") Submit Payment
 
   .my-8.flex.flex-col.gap-4(v-if="record")
-    button.p-2.bg-light-400.font-bold.shadow.rounded-xl(@click="go('/payments/')") Go back to payments list
-
-
+    a.p-2.bg-light-400.font-bold.shadow.rounded-xl(href="/payments/#") Go back to payments list
 
     PaymentSlip(:payment="record")
       qrcode-vue.w-full.rounded.mx-auto.mt-4(:value="link" size="auto" level="H" render-as="svg")

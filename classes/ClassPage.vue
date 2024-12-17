@@ -33,7 +33,7 @@ async function join() {
 
 <template lang='pug'>
 transition(name="fade")
-  .flex.flex-col.gap-4.sticky.mt-8.overflow-scroll.bottom-4.left-4.right-4.bg-light-200.p-4.rounded-3xl(v-if="hash")
+  .mx-2.flex.flex-col.gap-4.sticky.mt-8.overflow-scroll.bottom-4.left-4.right-4.bg-light-200.p-4.rounded-3xl.shadow-lg(v-if="hash")
     a.p-4.rounded-full.bg-light-200.absolute.top-2.right-2(href="#")
       .i-la-times
     .flex.flex-wrap.gap-2
@@ -51,5 +51,5 @@ transition(name="fade")
     ContactMe
     .flex.flex-wrap.gap-2.p-2(v-if="data?.students")
       .p-2.bg-light-800.rounded-xl(v-for="student in data?.students" :key="student") {{ student.directus_users_id.first_name }} {{ student.directus_users_id.last_name }}
-    button.p-2.shadow-lg.hover-brightness-150.hover-shadow-xl.bg-green-700.rounded-xl.font-bold.uppercase(@click="join()" v-if="user && !joined") Join
+    button.p-2.shadow-lg.hover-brightness-150.hover-shadow-xl.bg-orange-400.rounded-xl.font-bold.uppercase(@click="join()" v-if="user && !joined") Join
 </template>

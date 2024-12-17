@@ -13,7 +13,7 @@ const { user, userDB, auth, logout } = useUser()
 <template lang='pug'>
 .p-4.flex.flex-col.gap-2(v-if="user")
   .flex.gap-2.items-center.p-2
-    img.rounded-full(:src="`https://schooldb.chromatone.center/assets/${user.avatar}?width=50&height=50`")
+    img.rounded-full(:src="`https://schooldb.chromatone.center/assets/${user.avatar}?width=50&height=50`" v-if="user.avatar")
     .flex.flex-col
       .text-2xl {{ user.first_name }} {{ user.last_name }}
       .text-xs.op-50 {{ user.location }}

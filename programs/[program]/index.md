@@ -1,12 +1,12 @@
 ---
 dynamic: true
-title: Program
+title: Programs
 ---
 
 <script setup>
 import ProgramPage from '../ProgramPage.vue'
 </script>
 
-<ProgramPage />
-
+<ProgramPage >
 <!-- @content -->
+</ProgramPage>

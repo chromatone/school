@@ -5,6 +5,7 @@ home: true
 <script setup>
 import ClassSchedule from './classes/ClassSchedule.vue'
 import ProgramsList from './programs/ProgramsList.vue'
+import YoutubeEmbed from './use/YoutubeEmbed.vue'
 
 import { defineClientComponent } from 'vitepress'
 const CourseList = defineClientComponent(() => import('./courses/CourseList.vue'))
@@ -28,6 +29,8 @@ Visual Music Theory helps understand at notes and scales, Collaborative Jam Perf
 
 I will share my experience, help you build your own knowledge and plan of action to develop sufficient skills to use it creatively. You are free to use all this for your self-expression!
 
+<YoutubeEmbed video="34Sg5JMlE10" />
+
 <ProgramsList />
 
 <CourseList />
@@ -36,7 +39,7 @@ I will share my experience, help you build your own knowledge and plan of action
 
 ### Visual Music School
 
-While being phenomenally different, sensations converge in our minds and there we can build any kinds of connections. It's where we start seeing music. That's how I studied music myself: with colorful stickers applied on the keyboard of my OP-1 and a memo cheatsheet with diagrams of all chords in basic diatonic scales to put at sight and go with all this to any rehearsal or jam place to start exploring this space with other musicians.
+While being fundamentally different, sensations converge in our mind and there we can build any kinds of connections there. It's where we start seeing music. That's how I studied music myself: with colorful stickers applied on the keyboard of my OP-1 and a memo cheatsheet with diagrams of all chords in basic diatonic scales to put at sight and go with all this to any rehearsal or jam place to start exploring this space with other musicians.
 
 And then I realized how valuable those unique moments of joy are when people play together in sync, and got immersed in live music more and more. While having published tracks and experience in many other fields, live jam performance is my main focus for many years and from many perspectives.
 
