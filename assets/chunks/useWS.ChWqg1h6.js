@@ -1,0 +1,1 @@
+import{l as o,p as n,v as s}from"./theme.n0hWwsmd.js";import{r,o as a}from"./framework.BqMAUCVn.js";const t=o("https://schooldb.chromatone.center/").with(n("ogbYm_VIY1zQ29J1BLd1Xf29EQnCjswk")).with(s()),e=r(!1);function f(){return a(async()=>{e.value||(await t.connect(),e.value=!0)}),{ws:t,connected:e}}export{f as u};
