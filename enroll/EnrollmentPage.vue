@@ -71,13 +71,15 @@ template(v-else-if="enrollment")
     xmlns:xlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 210 297"
     version="1.1"
-    style="font-family: monospace;"
+
     )
     g(v-for="(en, e) in enrollments" :key="en" :transform="`translate(${e % 2 * 105 + 2}, ${Math.floor(e / 2) * 74 + 2})`")
+
       rect(
-        rx="1" stroke-width=".25"
+        rx="2" stroke-width=".25"
         x="1" width="100" :height="70" stroke="#000" fill="#fff")
-      QrcodeVue(:value="`https://school.chromatone.center/enroll/#${en?.id}`" :x="62" y="22" :size="36" render-as="svg")
+      QrcodeVue(:value="`https://school.chromatone.center/enroll/#${en?.id}`" :x="62" y="21" :size="36" render-as="svg")
+
       text(x="4" y="8" font-size="6") Creative Multimedia School
       text(x="4" y="16" font-size="4.5" ) 
         tspan(font-weight="bold") {{ en?.course?.program?.title }}  
@@ -85,7 +87,7 @@ template(v-else-if="enrollment")
       text(x="4" y="65" font-size="4.3" ) {{ en?.id }}
 
       g(v-for="(cls, c) in en?.course?.classes" :key="cls") 
-        text(x="4" :y="28 + c * 8" font-size="4") {{ format(cls.date, 'HH:mm EEE dd MMM yy') }} 
+        text(x="12" :y="28.5 + c * 8" font-size="4") {{ format(cls.date, 'HH:mm EEE dd MMM yy') }} 
         .font-bold {{ cls.module?.title }}
-        rect(width="4" height="4" fill="none" stroke="black" stroke-width=".5" rx=".5" x="54" :y="25 + c * 8")
+        rect(width="4" height="4" fill="none" stroke="black" stroke-width=".5" rx="2" x="5" :y="25 + c * 8")
 </template>

@@ -14,7 +14,7 @@ onMounted(async () => {
     uid: 'courses-list-sub',
     query: {
       sort: ['start_date'],
-      fields: ['*', 'program.title', 'classes.*', 'classes.module.title']
+      fields: ['*', 'program.slug', 'program.color', 'classes.*', 'classes.module.title']
     }
   })
 
@@ -38,17 +38,17 @@ const hash = useHash()
 .flex.gap-4.py-8.p-4.max-w-100vw.overflow-x-scroll
   transition-group(name="fade")
     .i-la-spinner.text-4xl.animate-spin.absolute(v-if="courses.length == 0"  key="spinner")
-    a.no-underline.shadow-lg.p-4.flex.flex-col.rounded-xl.gap-2.flex-1.hover-brightness-110(
+    a.font-normal.no-underline.shadow-lg.flex.flex-col.rounded-xl.flex-1.hover-brightness-140.overflow-hidden.bg-light-300(
       style="flex: 1 0 200px"
-      v-for="course in courses" :key="course.id" :href="`/courses/#${course.id}`" :class="{ [course.id == hash ? 'bg-orange-300' : 'bg-light-700']: true }") 
-      .text-2xl.flex.flex-wrap.items-baseline.gap-2 
-        .op-70 {{ course.program.title }} 
-        .px-2.py-1.bg-light-900.rounded-lg.text-sm {{ course.level }}
-      .flex.w-full 
+      v-for="course in courses" :key="course.id" :href="`/courses/#${course.id}`" :class="{ [course.id == hash ? 'brightness-120' : 'brightness-100']: true }") 
+      .flex.flex-wrap.items-baseline.gap-2.pt-4.px-2.pb-2.relative(:style="{ backgroundColor: course?.program?.color }") 
+        .text-3em.op-90.font-thin {{ course?.program?.slug }} 
+        .absolute.top-2.right-2.px-2.py-1.bg-light-900.rounded-lg.text-sm {{ course?.level }}
+      .flex.w-full.p-2
         .text-sm Starts {{ useTimeAgo(course.start_date) }}
         .flex-1 
       .flex-1
-      button.text-left.p-2.rounded-xl.shadow.bg-orange-200.self-start  
+      button.m-2.text-left.p-2.rounded-xl.shadow.bg-orange-200.self-start  
         .op-80 {{ course.classes_count }}  weekly classes
         .font-bold {{ Number(course?.price) }} THB
 

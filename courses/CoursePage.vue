@@ -14,7 +14,7 @@ const client = createDirectus('https://schooldb.chromatone.center/')
   .with(rest())
 
 const course = computedAsync(async () => hash.value && await client.request(readItem('courses', hash.value, {
-  fields: ['*', 'program.title', 'classes.*', 'classes.module.title', 'teacher.*', 'enrollments.*']
+  fields: ['*', 'program.title', 'program.color', 'classes.*', 'classes.module.title', 'teacher.*', 'enrollments.*']
 })), [])
 
 const { user, userDB } = useUser()
@@ -23,27 +23,28 @@ const { user, userDB } = useUser()
 
 <template lang='pug'>
 transition(name="fade")
-  .mx-4.flex.flex-col.gap-2.sticky.mt-8.overflow-scroll.bottom-4.left-4.right-4.bg-light-100.p-4.rounded-3xl.max-w-45ch.max-h-90vh.relative(v-if="hash")
-    a.p-4.rounded-full.bg-light-200.absolute.top-2.right-2(href="#")
+  .mx-4.flex.flex-col.sticky.mt-8.overflow-scroll.bottom-4.left-4.right-4.bg-light-100.rounded-xl.max-w-45ch.max-h-90vh.relative(v-if="hash")
+    a.p-2.rounded-lg.bg-light-200.absolute.top-2.right-2(href="#")
       .i-la-times
-    .flex.flex-wrap.gap-2.items-center
-      .text-2xl.font-bold {{ course.program?.title }}
-      .text-2xl  {{ course.level }} Course
+    .flex.flex-wrap.gap-2.items-center.px-2.pb-2.pt-6(:style="{ backgroundColor: course?.program?.color }")
+      .text-4xl.font-bold {{ course.program?.title }}
+      .flex.items-center.w-full
+        .text-2xl  {{ course.level }} Course
+        .flex-1
+        .flex.flex-wrap.gap-2.items-center.p-2 by
+          img.rounded-full.w-30px.h-30px(
+            v-if="course?.teacher?.avatar"
+            :src="`https://schooldb.chromatone.center/assets/${course?.teacher?.avatar}?width=30&height=30`")
+          .p-0 {{ course?.teacher?.first_name }} {{ course?.teacher?.last_name }}
 
-    .flex.flex-wrap.gap-2.items-center
-      img.rounded-full.w-30px.h-30px(
-        v-if="course?.teacher?.avatar"
-        :src="`https://schooldb.chromatone.center/assets/${course?.teacher?.avatar}?width=30&height=30`")
-      .p-0 {{ course?.teacher?.first_name }} {{ course?.teacher?.last_name }}
-
-    .flex.flex-wrap.gap-2
+    .flex.flex-wrap.p-2
       .text-lg Starts {{ useTimeAgo(course.start_date) }}
 
-    .flex.flex-col.gap-2(v-if="true")
-      .p-0 {{ course?.enrollments?.length }}/{{ course?.capacity }} students enrolled 
-      .p-0 Need {{ course?.threshold }} to start course
+    .flex.flex-col.gap-2.p-2(v-if="true")
+      .p-0 {{ course?.threshold }} ≥ <b>{{ course?.enrollments?.length }}</b>  ≤ {{ course?.capacity }} students enrolled 
 
-    .flex.flex-col.gap-2
+
+    .flex.flex-col.gap-2.p-2
       a.no-underline.p-2.rounded-xl.bg-light-700.flex.gap-2(v-for="(cls, c) in course?.classes" :key="cls" :href="`/classes/#${cls.id}`") 
         .op-50 {{ c + 1 }}.
         .op-100  {{ cls.module.title }}

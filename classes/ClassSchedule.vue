@@ -11,7 +11,7 @@ const classes = ref([])
 
 onMounted(async () => {
   classes.value = await client.request(readItems('classes', {
-    fields: ['*', 'module.title', 'course.level', 'course.program.slug'],
+    fields: ['*', 'module.title', 'course.level', 'course.program.slug', 'course.program.color'],
   }));
 })
 
@@ -55,6 +55,7 @@ const hash = useHash()
           a.flex.flex-wrap.items-center.gap-1.items-start.bg-light-500.rounded.p-1(:href="`/classes/#${cls.id}`" :class="{ 'bg-orange-200': cls.id == hash }")
             .text-xs.font-bold.bg-orange.rounded.p-1 {{ format(parseISO(cls.date), 'HH:mm') }} 
             .flex-1 
-            .text-xs.uppercase.op-60 {{ cls?.course?.program?.slug }} {{ cls?.course?.level }} 
             .text-sm {{ cls?.module?.title }}
+            .text-10px.uppercase.px-1.rounded.font-bold(:style="{ backgroundColor: cls?.course?.program?.color }") {{ cls?.course?.program?.slug }} {{ cls?.course?.level }} 
+            
 </template>
