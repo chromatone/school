@@ -17,8 +17,8 @@ const CoursePage = defineClientComponent(() => import('./CoursePage.vue'))
 
 </script>
 
+<CoursePage />
+
 <CourseList />
 
 <!-- <CourseTimeline /> -->
-
-<CoursePage />

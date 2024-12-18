@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, reactive, ref } from 'vue';
+import { onMounted, reactive } from 'vue';
 import { format } from 'date-fns';
 import { useWS } from '../use/useWS';
 import { useHash } from '../use/useHash';
@@ -15,7 +15,7 @@ onMounted(async () => {
     uid: 'classes-list-sub',
     query: {
       sort: ['date'],
-      fields: ['*', 'module.title', 'course.level', 'course.program.slug']
+      fields: ['*', 'module.title', 'course.level', 'course.teacher.*', 'course.program.title']
     }
   })
 
@@ -39,8 +39,14 @@ onMounted(async () => {
         .flex-1 
         .text-sm {{ format(cl.date, 'dd MMM yy') }}
       .flex.items-center.gap-2.items-center
-        .op-70.uppercase {{ cl?.course?.program?.slug }} 
+        .op-70 {{ cl?.course?.program?.title }} 
         .px-2.py-1.bg-light-800.rounded-lg.text-xs {{ cl?.course?.level }}
       .text-lg {{ cl?.module?.title }}
+      .flex-1
+      .flex.flex-wrap.gap-2.items-center 
+        img.rounded-full.w-30px.h-30px(
+          v-if="cl?.course?.teacher?.avatar"
+          :src="`https://schooldb.chromatone.center/assets/${cl?.course?.teacher?.avatar}?width=30&height=30`")
+        .p-0 {{ cl?.course?.teacher?.first_name }} {{ cl?.course?.teacher?.last_name }}
 
 </template>

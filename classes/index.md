@@ -3,14 +3,6 @@ title: Classes
 description: Weekly classes in ongoing courses
 ---
 
-### Weekly classes
-
-1 hour group education session
-
-- 20 min presentation
-- 20 min discovery
-- 20 min collaboration
-
 <script setup>
 import { defineClientComponent } from 'vitepress'
 
@@ -23,6 +15,6 @@ const ClassPage = defineClientComponent(() => import('./ClassPage.vue'))
 
 <ClassSchedule />
 
-<ClassList />
-
 <ClassPage />
+
+<ClassList />

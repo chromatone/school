@@ -37,7 +37,7 @@ I will share my experience, help you build your own knowledge and plan of action
 
 <ClassSchedule />
 
-### Visual Music School
+### Why Visual Music School?
 
 While being fundamentally different, sensations converge in our mind and there we can build any kinds of connections there. It's where we start seeing music. That's how I studied music myself: with colorful stickers applied on the keyboard of my OP-1 and a memo cheatsheet with diagrams of all chords in basic diatonic scales to put at sight and go with all this to any rehearsal or jam place to start exploring this space with other musicians.
 

@@ -38,9 +38,9 @@ const hash = useHash()
 .flex.gap-4.py-8.p-4.max-w-100vw.overflow-x-scroll
   transition-group(name="fade")
     .i-la-spinner.text-4xl.animate-spin.absolute(v-if="courses.length == 0"  key="spinner")
-    a.no-underline.shadow-lg.p-4.flex.flex-col.rounded-xl.gap-2.flex-1(
+    a.no-underline.shadow-lg.p-4.flex.flex-col.rounded-xl.gap-2.flex-1.hover-brightness-110(
       style="flex: 1 0 200px"
-      v-for="course in courses" :key="course.id" :href="`/courses/#${course.id}`" :class="{ [course.id == hash ? 'bg-orange-300' : 'bg-light-500']: true }") 
+      v-for="course in courses" :key="course.id" :href="`/courses/#${course.id}`" :class="{ [course.id == hash ? 'bg-orange-300' : 'bg-light-700']: true }") 
       .text-2xl.flex.flex-wrap.items-baseline.gap-2 
         .op-70 {{ course.program.title }} 
         .px-2.py-1.bg-light-900.rounded-lg.text-sm {{ course.level }}
