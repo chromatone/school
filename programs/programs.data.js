@@ -7,7 +7,7 @@ export default {
         .with(rest())
         .request(readItems('programs', {
           sort: 'sort',
-          fields: ['*', 'courses.*']
+          fields: ['*', 'courses.*', 'courses.program.*', 'courses.teacher.*', 'courses.classes.module.title', 'courses.classes.date']
         }))
     } catch (e) {
       console.log('Programs fetch failed')

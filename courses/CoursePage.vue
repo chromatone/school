@@ -23,7 +23,7 @@ const { user, userDB } = useUser()
 
 <template lang='pug'>
 transition(name="fade")
-  .mx-4.flex.flex-col.sticky.mt-8.overflow-scroll.bottom-4.left-4.right-4.bg-light-100.rounded-xl.max-w-45ch.max-h-90vh.relative(v-if="hash")
+  .mx-4.flex.flex-col.sticky.mt-8.overflow-scroll.bottom-4.left-4.right-4.bg-light-100.rounded-xl.max-w-45ch.relative(v-if="hash")
     a.p-2.rounded-lg.bg-light-200.absolute.top-2.right-2(href="#")
       .i-la-times
     .flex.flex-wrap.gap-2.items-center.px-2.pb-2.pt-6(:style="{ backgroundColor: course?.program?.color }")
@@ -31,7 +31,7 @@ transition(name="fade")
       .flex.items-center.w-full
         .text-2xl  {{ course.level }} Course
         .flex-1
-        .flex.flex-wrap.gap-2.items-center.p-2 by
+        .flex.flex-wrap.gap-2.items-center.p-2 with
           img.rounded-full.w-30px.h-30px(
             v-if="course?.teacher?.avatar"
             :src="`https://schooldb.chromatone.center/assets/${course?.teacher?.avatar}?width=30&height=30`")

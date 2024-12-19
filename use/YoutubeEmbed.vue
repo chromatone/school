@@ -11,8 +11,8 @@ const loaded = ref(false)
 </script>
 
 <template lang="pug">
-.iframe-container.shadow-lg.rounded-lg.bg-cover.min-h-60()
-  .flex.items-center.relative.w-full.bg-cover.cursor-pointer.op-80.hover-op-100.transition(
+.iframe-container.max-w-100vw.shadow-lg.rounded-lg.bg-cover.min-h-60
+  .flex.items-center.relative.w-full.bg-cover.cursor-pointer.op-80.hover-op-100.transition.max-w-100vw(
     v-if="!loaded"
     @click="loaded = true")
     img.w-full(:src="`https://img.youtube.com/vi/${video}/hqdefault.jpg`")
