@@ -2,6 +2,7 @@
 import { useTimeAgo } from '@vueuse/core';
 import { data } from './programs.data'
 import { format } from 'date-fns';
+import ContactMe from '../contact/ContactMe.vue';
 
 </script>
 
@@ -11,9 +12,9 @@ import { format } from 'date-fns';
   .flex-1 
   .op-80 {{ data.length }}
 p Multimedia requires different perspectives and focus points to be present in creation process in order to produce a decent product - be it a music performance/recording, a video clip or an interactive web-app. 
-.flex.max-w-100vw.gap-2.overflow-x-scroll.p-4
+.flex.max-w-100vw.gap-8.overflow-x-scroll.p-4
   .bg-light-800.text-xl.no-underline.rounded-xl.overflow-hidden.shadow-lg.hover-brightness-110.flex.flex-col(
-    style="flex: 1 0 260px"
+    style="flex: 1 0 300px"
     v-for="program in data" :key="program"
     )
     a.p-3.no-underline(:style="{ backgroundColor: program?.color }" :href="`/programs/${program.slug}/`" )
@@ -36,12 +37,12 @@ p Multimedia requires different perspectives and focus points to be present in c
           .font-bold {{ cls?.module?.title }}
       .flex.flex-col.w-full.p-2
         .text-sm 1 month
-        .text-sm.op-80 {{ course.classes_count }}  weekly classes
+        .text-sm.op-80 {{ course.classes_count }} classes 
         .font-bold {{ Number(course?.price) }} THB
         .text-sm Starts {{ useTimeAgo(course.start_date) }}
         .flex-1 
       .flex-1
-      button.m-2.text-left.p-2.rounded-xl.shadow.bg-orange-200.self-start Enroll now
+      .p-2.bg-orange-300 Buy enrollment cards at Place Coworking hall, 59/2 Chao Fah Tawan Tok Rd, Chalong, Phuket
 
         
 </template>

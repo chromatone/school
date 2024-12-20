@@ -3,9 +3,9 @@
 </script>
 
 <template lang='pug'>
-.p-2.flex.gap-2.items-center.bg-light-700.rounded-xl
+.p-2.flex.flex-wrap.gap-2.items-center.bg-light-700.rounded-xl
   .text-sm
-    slot For attendence contact me via
+    slot For enrollment contact me via
   a.no-underline.flex.items-center.gap-1.p-2.rounded-lg.bg-orange-300.shadow.active-brightness-200.hover-brightness-130(href="https://t.me/starov" target="_blank" title="Telegram")
     .i-la-telegram
     .p-0 starov

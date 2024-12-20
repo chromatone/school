@@ -50,6 +50,6 @@ transition(name="fade")
     .text-xs(v-if="clas?.module?.description") {{ clas?.module?.description }} 
     ContactMe
     .flex.flex-wrap.gap-2.p-2(v-if="data?.students")
-      .p-2.bg-light-800.rounded-xl(v-for="student in data?.students" :key="student") {{ student.directus_users_id.first_name }} {{ student.directus_users_id.last_name }}
+      .p-2.bg-light-800.rounded-xl(v-for="student in data?.students" :key="student") {{ student.directus_users_id?.first_name }} {{ student.directus_users_id?.last_name }}
     button.p-2.shadow-lg.hover-brightness-150.hover-shadow-xl.bg-orange-400.rounded-xl.font-bold.uppercase(@click="join()" v-if="user && !joined") Join
 </template>

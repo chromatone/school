@@ -1,6 +1,7 @@
 <script setup>
 import { updateUser } from '@directus/sdk';
 import { useUser } from '../use/useUser';
+import EnrollmentsList from '../enroll/EnrollmentsList.vue';
 
 const { user, userDB } = useUser()
 
@@ -12,7 +13,7 @@ async function updateField(field = 'first_name', text = '') {
 </script>
 
 <template lang='pug'>
-.flex.flex-col.gap-2(v-if="user")
+.flex.flex-col.gap-2.bg-light-600.p-2.rounded-xl.gap-1.m-2(v-if="user")
   .text-xl USER
   label(for="email") Email
   input.p-2.rounded#email(:value="user.email" type="text" disabled)
@@ -24,5 +25,6 @@ async function updateField(field = 'first_name', text = '') {
   input.p-2.rounded#location(v-model="user.location" type="text" @change="updateField('location', $event.target.value)")
   label(for="birthday") Birthday
   input.p-2.rounded#birthday(v-model="user.birthday" type="date" @change="updateField('birthday', $event.target.value)")
-  pre {{ user }}
+  .op-40.text-xs Data is saved automatically on every change.
+EnrollmentsList
 </template>

@@ -33,8 +33,6 @@ I will share my experience, help you build your own knowledge and plan of action
 
 <ProgramsList />
 
-<CourseList />
-
 <ClassSchedule />
 
 ### Why Visual Music School?
@@ -51,8 +49,8 @@ Dynamic group education is an important part of study process as it provides opp
 
 So, here's what we have now:
 
-- 1 month long courses
-- Weekly classes with creative homework
+- 1 month short courses
+- Weekly 1 hour group classes with creative homework
 - 4-8 students per course
 
 ## Jam sessions
