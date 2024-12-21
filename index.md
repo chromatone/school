@@ -27,7 +27,7 @@ Hundreds of students all around the world are already using my instrument sticke
 
 At some point I've discovered 4 main perspectives from which we can look at music and multimedia art together.
 
-[Visual Music Theory](./programs/vmt/) helps understanding rhythms, notes, intervals, chords and scales, Collaborative Jam Performance is a way to enjoy implementing this knowledge with others, Live Multimedia Production focuses on recording and processing content while Creative Web-Development is about apps and their features.
+**Visual Music Theory** helps understanding rhythms, notes, intervals, chords and scales, **Collaborative Jam Performance** is a way to enjoy implementing this knowledge with others, **Live Multimedia Production** focuses on recording and processing content while **Creative Web-Development** is about apps and their features. And together they are a framework to express yourself through the means of modern multimedia technology.
 
 I will share my experience, help you build your own knowledge and plan of action to develop sufficient skills to use it creatively. You are free to use all this for your self-expression!
 
