@@ -39,12 +39,6 @@ const hash = useHash()
 .flex.flex-col.gap-0
 
   .text-2xl.mt-8.mx-2 Class Schedule
-  .text-xl.op-50.mx-2 Weekly classes
-  p Class - 1 hour guided group education session
-  ul.m-0
-    li 20 min presentation
-    li 20 min discovery
-    li 20 min performance
   .text-lg.mb-4.mx-2 Week {{ getWeek(Date.now()) }}
 
   .grid.grid-cols-7.gap-2.mb-8.not-prose.overflow-x-scroll.font-mono.max-w-100vw
