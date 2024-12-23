@@ -33,13 +33,15 @@ const hash = useHash()
 </script>
 
 <template lang="pug">
-.flex.flex-col.gap-0
+.flex.flex-col(v-if="!hash")
 
   .text-2xl.mt-8.mx-2 Class Schedule
   .text-lg.mb-4.mx-2 Week {{ getWeek(Date.now()) }}
 
-  .grid.grid-cols-7.gap-2.mb-8.not-prose.overflow-x-scroll.font-mono.max-w-100vw
+  .grid.gap-2.mb-8.not-prose.overflow-x-scroll.font-mono(style="grid-template-columns: 1fr 1fr 3fr 1fr 3fr 1fr 3fr;")
+
     .rounded.font-bold.bg-gray-400.p-2(v-for="day in ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']" :key="day" :class="{ 'bg-orange-300': ['Sat', 'Sun'].includes(day) }") {{ day }}
+
     .rounded.p-1.bg-light-50.flex.flex-col.gap-1(v-for="date in calendarDates" :key="date" :class="{ 'bg-orange-300': isSameDay(date, Date.now()), 'bg-light-900': isWeekend(date), 'op-50': classes.filter((cls) => isSameDay(parseISO(cls.date), date)).length == 0 && events.filter((ev) => isSameDay(parseISO(ev.date), date)).length == 0 }")
 
       .text-sm.font-semibold {{ format(date, 'dd') }} {{ isFirstDayOfMonth(date) ? format(date, 'MMM') : '' }} {{ isFirstDayOfMonth(date) && isSameMonth(date, new Date(date.getFullYear(), 0, 1)) ? format(date, 'yyyy') : '' }} {{ isSameDay(date, Date.now()) ? 'Today' : '' }}
@@ -60,8 +62,7 @@ const hash = useHash()
             .text-xs.font-bold.bg-light-100.bg-op-80.rounded.p-1 {{ format(parseISO(cls.date), 'HH:mm') }}
             .flex-1
             .text-10px.uppercase.px-1.rounded.font-bold.brightness-140.saturate-80(:style="{ backgroundColor: cls?.course?.program?.color }") {{ cls?.course?.program?.slug }} {{ cls?.course?.level }} 
-            .flex-1 
-            .text-sm {{ cls?.module?.title }}
 
+            .text-sm(style="flex: 1 1 220px") {{ cls?.module?.title }}
             
 </template>

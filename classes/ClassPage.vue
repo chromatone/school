@@ -33,9 +33,9 @@ async function join() {
 
 <template lang='pug'>
 transition(name="fade")
-  .mx-2.flex.flex-col.gap-4.sticky.mt-8.overflow-scroll.bottom-4.left-4.right-4.bg-light-200.p-4.rounded-3xl.shadow-lg(v-if="hash")
-    a.p-4.rounded-full.bg-light-200.absolute.top-2.right-2(href="#")
-      .i-la-times
+  .mx-2.flex.flex-col.gap-4.bg-light-200.p-4.rounded-3xl.shadow-lg(v-if="hash")
+    a.p-4.rounded-full.bg-light-200.absolute.top-2.right-2(href="/classes/#")
+      .i-la-angle-left
     .flex.flex-wrap.gap-2
       .text-lg(v-if="clas.date") {{ format(clas.date, 'HH:mm EEEE dd MMMM yyyy') }}
     .flex.flex-wrap.gap-2.items-center

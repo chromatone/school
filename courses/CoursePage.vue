@@ -23,9 +23,9 @@ const { user, userDB } = useUser()
 
 <template lang='pug'>
 transition(name="fade")
-  .mx-4.flex.flex-col.sticky.mt-8.overflow-scroll.bottom-4.left-4.right-4.bg-light-100.rounded-xl.max-w-45ch.relative(v-if="hash")
-    a.p-2.rounded-lg.bg-light-200.absolute.top-2.right-2(href="#")
-      .i-la-times
+  .mx-4.flex.flex-col.mt-8.bg-light-100.rounded-xl.max-w-45ch.relative(v-if="hash")
+    a.p-2.rounded-lg.bg-light-200.absolute.top-2.right-2(href="/courses/#")
+      .i-la-angle-left
     .flex.flex-wrap.gap-2.items-center.px-2.pb-2.pt-6(:style="{ backgroundColor: course?.program?.color }")
       .text-4xl.font-bold {{ course.program?.title }}
       .flex.items-center.w-full
@@ -44,11 +44,14 @@ transition(name="fade")
       .p-0 {{ course?.threshold }} ≥ <b>{{ course?.enrollments?.length }}</b>  ≤ {{ course?.capacity }} students enrolled 
 
 
+
     .flex.flex-col.gap-2.p-2
       a.no-underline.p-2.rounded-xl.bg-light-700.flex.gap-2(v-for="(cls, c) in course?.classes" :key="cls" :href="`/classes/#${cls.id}`") 
         .op-50 {{ c + 1 }}.
         .op-100  {{ cls.module.title }}
         .op-60 {{ useTimeAgo(cls.date) }}
 
-    ContactMe For enrollment contact me via 
+    a.no-underline.p-2.bg-orange-300.text-lg.m-4.rounded-xl(href="/#how-to-find-us") Purchase enrollment cards at the counter in Place Coworking, 59/2 Chao Fah Tawan Tok Rd, Chalong, Phuket.
+
+    ContactMe For enrollment support and troubleshooting contact me via 
 </template>

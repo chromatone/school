@@ -25,24 +25,24 @@ p Multimedia requires different perspectives and focus points to be present in c
     .flex-1
     .op-80.text-xs.mx-2 {{ program.courses.length }} course available to enroll
 
-    a.m-2.font-normal.no-underline.shadow-lg.flex.flex-col.rounded-xl.overflow-hidden.bg-light-300(
-
-      v-for="course in program?.courses" :key="course.id" :href="`/courses/#${course.id}`") 
-      .flex.flex-wrap.items-baseline.gap-2.pt-4.px-2.pb-2.relative(:style="{ backgroundColor: course?.program?.color }") 
+    .m-2.font-normal.no-underline.shadow-lg.flex.flex-col.rounded-xl.overflow-hidden.bg-light-300(v-for="course in program?.courses" :key="course.id" ) 
+      a.no-underline.flex.flex-wrap.items-baseline.gap-2.pt-4.px-2.pb-2.relative(
+        :href="`/courses/#${course.id}`"
+        :style="{ backgroundColor: course?.program?.color }") 
         .text-2rem.mr-8.line-height-1em.op-90.font-thin <b>{{ course?.level }}</b> course
         .flex.flex-wrap.gap-2.items-center with {{ course?.teacher?.first_name }} {{ course?.teacher?.last_name }}
-      .flex.flex-col.gap-1.p-1
+      .no-underline.flex.flex-col.gap-1.p-1
         .flex.flex-col.p-1.text-sm.bg-light-600.rounded-lg.shadow(v-for="cls in course?.classes" :key="cls")
           .p-0.font-mono {{ format(cls.date, 'HH:mm EEE dd MMM yy') }} 
           .font-bold {{ cls?.module?.title }}
-      .flex.flex-col.w-full.p-2
+      a.no-underline.flex.flex-col.w-full.p-2(:href="`/courses/#${course.id}`")
         .text-sm 1 month
         .text-sm.op-80 {{ course.classes_count }} classes 
         .font-bold {{ Number(course?.price) }} THB
         .text-sm Starts {{ useTimeAgo(course.start_date) }}
         .flex-1 
       .flex-1
-      .p-2.bg-orange-300 Buy enrollment cards at Place Coworking hall, 59/2 Chao Fah Tawan Tok Rd, Chalong, Phuket
+      a.no-underline.p-2.bg-orange-300.text-lg(href="/#how-to-find-us") Purchase enrollment cards at the counter in Place Coworking, 59/2 Chao Fah Tawan Tok Rd, Chalong, Phuket.
 
         
 </template>

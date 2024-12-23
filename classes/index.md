@@ -13,8 +13,8 @@ const ClassPage = defineClientComponent(() => import('./ClassPage.vue'))
 
 </script>
 
+<ClassList />
+
 <ClassSchedule />
 
 <ClassPage />
-
-<ClassList />
