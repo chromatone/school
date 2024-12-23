@@ -23,7 +23,7 @@ const { user, userDB } = useUser()
 
 <template lang='pug'>
 transition(name="fade")
-  .mx-4.flex.flex-col.mt-8.bg-light-100.rounded-xl.max-w-45ch.relative(v-if="hash")
+  .mx-4.flex.flex-col.mt-8.bg-light-100.rounded-xl.max-w-45ch.relative.my-8.overflow-hidden(v-if="hash")
     a.p-2.rounded-lg.bg-light-200.absolute.top-2.right-2(href="/courses/#")
       .i-la-angle-left
     .flex.flex-wrap.gap-2.items-center.px-2.pb-2.pt-6(:style="{ backgroundColor: course?.program?.color }")

@@ -31,11 +31,11 @@ const hash = useHash()
 </script>
 
 <template lang='pug'>
-.text-2xl.flex.p-2.mt-8
+.text-2xl.flex.p-2.mt-8(v-if="!hash")
   .font-bold Available courses
   .flex-1 
   .op-80 {{ courses.length }}
-.flex.gap-4.py-8.p-4.max-w-100vw.overflow-x-scroll
+.flex.gap-4.py-8.p-4.max-w-100vw.overflow-x-scroll.min-w-100vw(v-if="!hash")
   transition-group(name="fade")
     .i-la-spinner.text-4xl.animate-spin.absolute(v-if="courses.length == 0"  key="spinner")
     a.font-normal.no-underline.shadow-lg.flex.flex-col.rounded-xl.flex-1.hover-brightness-140.overflow-hidden.bg-light-300(

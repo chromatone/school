@@ -23,6 +23,9 @@ importers:
       jspdf:
         specifier: ^2.5.2
         version: 2.5.2
+      libphonenumber-js:
+        specifier: ^1.11.17
+        version: 1.11.17
       qrcode.vue:
         specifier: ^3.6.0
         version: 3.6.0(vue@3.5.13)
@@ -1182,6 +1185,9 @@ packages:
 
   kolorist@1.8.0:
     resolution: {integrity: sha512-Y+60/zizpJ3HRH8DCss+q95yr6145JXZo46OTpFvDZWLfRCE4qChOyk1b26nMaNpfHHgxagk9dXT5OP0Tfe+dQ==}
+
+  libphonenumber-js@1.11.17:
+    resolution: {integrity: sha512-Jr6v8thd5qRlOlc6CslSTzGzzQW03uiscab7KHQZX1Dfo4R6n6FDhZ0Hri6/X7edLIDv9gl4VMZXhxTjLnl0VQ==}
 
   load-tsconfig@0.2.5:
     resolution: {integrity: sha512-IXO6OCs9yg8tMKzfPZ1YmheJbZCiEsnBdcB03l0OcfK9prKnJb96siuHCr5Fl37/yo9DnKU+TLpxzTUspw9shg==}
@@ -2768,6 +2774,8 @@ snapshots:
       promise: 7.3.1
 
   kolorist@1.8.0: {}
+
+  libphonenumber-js@1.11.17: {}
 
   load-tsconfig@0.2.5: {}
 
