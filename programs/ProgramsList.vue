@@ -12,7 +12,7 @@ import ContactMe from '../contact/ContactMe.vue';
   .flex-1 
   .op-80 {{ data.length }}
 p Multimedia requires different perspectives and focus points to be present in creation process in order to produce a decent product - be it a music performance/recording, a video clip or an interactive web-app. 
-.flex.max-w-100vw.gap-8.overflow-x-scroll.p-4
+.flex.max-w-100vw.gap-8.overflow-x-scroll.p-4.overscroll-x-contain
   .bg-light-800.text-xl.no-underline.rounded-xl.overflow-hidden.shadow-lg.hover-brightness-110.flex.flex-col(
     style="flex: 1 0 300px"
     v-for="program in data" :key="program"
