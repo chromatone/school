@@ -1,5 +1,5 @@
 ---
-title: Creative Multimedia School
+title: Courses
 description: Weekly classes in ongoing courses
 ---
 

@@ -32,9 +32,7 @@ onClickOutside(authModal, () => {
 
   a.p-2.op-50.flex.gap-2.items-center(href="/" v-if="!f.home") 
     img.w-6.h-6(src="/smooth.svg")
-    .text-lg Creative Multimedia School
-
-  h1.p-2.text-2xl {{ f.title }}
+    .text-lg Creative Multimedia School / {{ f.title }}
 
   content.prose.max-w-unset.flex-1
 
