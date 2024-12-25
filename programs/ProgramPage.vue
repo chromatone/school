@@ -2,19 +2,17 @@
 import { format } from 'date-fns';
 import { useData } from 'vitepress'
 
-// params is a Vue ref
 const { params } = useData()
-
-
 
 </script>
 
 <template lang='pug'>
-.flex.flex-col.gap-4
-  .text-8xl.font-thin.op-80.mt-12 {{ $params.slug }}
-  .text-4xl.m-0 {{ $params.title }}
-  p.text-lg {{ $params.description }}
-  .max-w-45ch
+.flex.flex-col.rounded-lg.overflow-hidden.shadow.bg-light-700.mx-2
+  .flex.flex-col.p-2(:style="{ backgroundColor: $params?.color }")
+    .text-8xl.font-thin.op-80.mt-12 {{ $params.slug }}
+    .text-4xl.m-0 {{ $params.title }}
+  .p-2.text-lg.bg-light-200 {{ $params.description }}
+  .max-w-45ch.p-2
     slot
   h3.text-2xl Courses
   .flex.flex-col.gap-4

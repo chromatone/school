@@ -11,11 +11,14 @@ import { defineClientComponent } from 'vitepress'
 const CourseList = defineClientComponent(() => import('./courses/CourseList.vue'))
 </script>
 
-**Chromatone**
+<div class="flex gap-2 items-center mx-2">
+<img src="/smooth.svg" width="20px" /> 
+<span class="font-bold">Chromatone</span>
+</div>
 
 # Creative Multimedia School
 
-## Place Collab, Phuket, Thailand
+## Place Coworking, Phuket, Thailand
 
 <img class="w-full max-w-55ch rounded-xl" src="/photo.jpeg" />
 
