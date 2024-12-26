@@ -33,12 +33,13 @@ const hash = useHash()
 </script>
 
 <template lang="pug">
-.flex.flex-col.max-w-100vw.max-h-80vh.p-2(v-if="!hash" )
+.flex.flex-col.max-w-100vw.max-h-80vh.bg-light-700.mx-4.shadow-xl.rounded-xl.my-12
+  .flex.p-4
+    .text-2xl.font-bold Our Schedule
+    .flex-1
+    .text-lg Week {{ getWeek(Date.now()) }}
 
-  .text-2xl.mt-8.mx-2 Class Schedule
-  .text-lg.mb-4.mx-2 Week {{ getWeek(Date.now()) }}
-
-  .grid.gap-2.mb-8.not-prose.overflow-x-scroll.font-mono.overscroll-x-contain( style="scrollbar-width: thin; grid-template-columns: 1fr 1fr 3fr 1fr 3fr 1fr 3fr;")
+  .grid.gap-2.not-prose.overflow-x-scroll.font-mono.overscroll-x-contain( style="scrollbar-width: thin; grid-template-columns: 1fr 1fr 3fr 1fr 3fr 1fr 3fr;")
 
     .rounded.font-bold.bg-gray-400.p-2.sticky.top-0.z-100(v-for="day in ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']" :key="day" :class="{ 'bg-orange-300': ['Sat', 'Sun'].includes(day) }") {{ day }}
 

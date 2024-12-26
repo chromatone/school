@@ -11,7 +11,7 @@ import ContactMe from '../contact/ContactMe.vue';
   .font-bold Programs
   .flex-1 
   .op-80 {{ data.length }}
-p Multimedia requires different perspectives and focus points to be present in creation process in order to produce a decent product - be it a music performance/recording, a video clip or an interactive web-app. 
+slot 
 .flex.max-w-100vw.gap-8.overflow-x-scroll.p-4.overscroll-x-contain
   .bg-light-800.text-xl.no-underline.rounded-xl.overflow-hidden.shadow-lg.hover-brightness-110.flex.flex-col(
     style="flex: 1 0 300px"
@@ -40,9 +40,9 @@ p Multimedia requires different perspectives and focus points to be present in c
         .text-sm.op-80 {{ course.classes_count }} classes 
         .font-bold {{ Number(course?.price) }} THB
         .text-sm Starts {{ useTimeAgo(course.start_date) }}
-        .flex-1 
+        .mt-1 {{ course?.enrollments?.length }}/{{ course?.capacity }} enrolled
       .flex-1
-      a.no-underline.p-2.bg-orange-300.text-lg(href="/#how-to-find-us") Purchase enrollment cards at the counter in Place Coworking, 59/2 Chao Fah Tawan Tok Rd, Chalong, Phuket.
-
+a.no-underline.p-4.bg-orange-300.text-lg.m-4.flex.shadow.rounded-xl.max-w-45ch.flex.flex-col.gap-0(href="/#how-to-find-us") 
+  .p-0.font-bold Buy and activate your enrollment card at the counter
         
 </template>

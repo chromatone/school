@@ -21,7 +21,7 @@ onClickOutside(authModal, () => {
 
 
 <template lang="pug">
-.flex.flex-col.items-start.w-full.h-full.justify-stretch.relative
+.flex.flex-wrap.items-stretch.w-full.h-full.justify-stretch.relative
 
   button.op-50.fixed.top-4.right-4.z-100.text-2xl.p-2.rounded-full.bg-light-400(@click="auth = !auth")
 
@@ -30,11 +30,22 @@ onClickOutside(authModal, () => {
   transition(name="fade")
     AuthForm.fixed.top-4.right-4.z-90(v-show="auth" ref="authModal")
 
-  a.p-2.op-50.flex.gap-2.items-center(href="/" v-if="!f.home") 
-    img.w-6.h-6(src="/smooth.svg")
-    .text-lg Creative Multimedia School / {{ f.title }}
+  .flex-1.p-4.bg-orange.m-2.rounded-xl.flex.flex-col.gap-1.max-w-50ch
+    a.flex.gap-2.items-center(href="https://chromatone.center/" target="_blank") 
+      img.w-6.h-6(src="/smooth.svg")
+      .font-bold Chromatone
+    .flex-1.min-h-12
+    a.text-4xl(href="/") Creative <br>Multimedia<br> School ​
+    .op-80.text-sm Place Coworking<br> 
+      .op-80 Phuket, Thailand
 
-  content.prose.max-w-unset.flex-1
+  .flex-1.p-4.flex.gap-4.items-start.flex-col(v-if="!f?.home")
+    .flex-1
+    .text-xl.font-bold(v-if="f?.title") {{ f.title }}
+
+  img.w-full.rounded-xl.m-2(src="/photo.jpeg" style="flex: 1 0 300px" v-if="f?.home")
+
+  content.prose.max-w-unset(style="flex: 1 1 100%")
 
   //- .flex.flex-wrap.gap-2.text-2xl.w-full
     a(href="/courses/") Courses
