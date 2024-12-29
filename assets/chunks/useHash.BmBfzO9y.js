@@ -1,0 +1,1 @@
+import{r as a,o,a5 as s}from"./framework.DStf2H8E.js";function t(){const e=a(""),n=()=>e.value=window.location.hash.slice(1);return o(()=>{n(),window.addEventListener("hashchange",n)}),s(()=>window.removeEventListener("hashchange",n)),e}export{t as u};
