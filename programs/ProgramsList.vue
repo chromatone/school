@@ -7,7 +7,7 @@ import ContactMe from '../contact/ContactMe.vue';
 </script>
 
 <template lang='pug'>
-.text-2xl.flex.p-2.mt-8
+.text-2xl.flex.p-2.mt-8(style="flex: 1 0 100%")
   .font-bold Programs
   .flex-1 
   .op-80 {{ data.length }}

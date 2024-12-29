@@ -1,6 +1,7 @@
 ---
-title: Event
-description: Except regular classes CMS is hosting and organizing various events for students and general public to participate.
+title: Events
+description: Workshops, performances, jams and other public happenings
+color: hsl(160deg,60%,60%)
 ---
 
 <script setup>

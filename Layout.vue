@@ -39,14 +39,14 @@ onClickOutside(authModal, () => {
     .op-80.text-sm Place Coworking<br> 
       .op-80 Phuket, Thailand
 
-  .flex-1.p-4.flex.items-start.flex-col(v-if="!f?.home")
+  .flex-1.p-4.flex.items-start.flex-col.m-2.rounded-xl(v-if="!f?.home" :style="{ backgroundColor: f?.color }")
     .flex-1
     .text-xl.font-bold(v-if="f?.title") {{ f.title }}
     .text-sm.op-80(v-if="f?.description") {{ f?.description }}
 
   img.w-full.rounded-xl.m-2(src="/photo.jpeg" style="flex: 1 0 300px" v-if="f?.home")
 
-  content.prose.max-w-unset(style="flex: 1 1 100%")
+  content.prose.max-w-unset.content(style="flex: 1 1 100%")
 
   //- .flex.flex-wrap.gap-2.text-2xl.w-full
     a(href="/courses/") Courses
@@ -59,7 +59,21 @@ onClickOutside(authModal, () => {
 .prose h1,
 .prose h2,
 .prose h3 {
+  @apply m-4;
   max-width: 55ch;
-  margin: 1em 8px;
+
+}
+
+.custom-block-title {
+  display: none;
+}
+
+.tip {
+  @apply p-2 m-2 bg-light-300 rounded-xl shadow max-w-55ch;
+  flex: 1 1 360px;
+}
+
+.content>div {
+  @apply flex flex-wrap items-start
 }
 </style>

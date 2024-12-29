@@ -11,7 +11,13 @@ import { defineClientComponent } from 'vitepress'
 const CourseList = defineClientComponent(() => import('./courses/CourseList.vue'))
 </script>
 
-### Improve your music skill and creative output while on the island
+::: tip
+
+### Improve your live music skillset and creative media productivity while on the island
+
+:::
+
+::: tip
 
 Hello! My name is Denis Starov. I'm the author and developer of Chromatone - the Visial Music Language. I found a point where ideas of Isaac Newton meet modern technology and science. Now we can establish consistent relations between notes and colors and bring visual awareness to music analysis, performance, composition and production. The same notes across octaves, frets and bars will have the same color and even rhythms!
 
@@ -23,13 +29,21 @@ At some point I've discovered 4 main perspectives from which we can look at musi
 
 I will share my experience, help you build your own knowledge and plan of action to develop sufficient skills to use it creatively. You are free to use all this for your self-expression!
 
+:::
+
 <YoutubeEmbed class="mx-2" video="34Sg5JMlE10" />
 
 <ProgramsList />
 
 <ClassSchedule />
 
+::: tip
+
 ### Prototyping efficient educational models
+
+:::
+
+::: tip
 
 While being fundamentally different, sensations converge in our brains so we can build any kinds of connections there. That's how anyone may once see sounds and music in color. That's how I studied music myself: with colorful stickers applied on the keyboard of my OP-1 and a memo cheatsheet with diagrams of all chords in basic diatonic scales to put at sight and go with all this to any rehearsal or jam place to start exploring this tonal space with other musicians.
 
@@ -41,13 +55,17 @@ Online tutorship and video courses are not really that effective as we are quite
 
 Dynamic group education is an important part of study process as it provides opportunities to also ask questions and explain something to others so that you better understand the subject yourself.
 
+:::
+
+::: tip
+
+## Weekly classes
+
 So, here's what we have now:
 
 - 1 month short courses
 - Weekly 1 hour group classes with creative homework
 - 4-8 students per course
-
-## Weekly classes
 
 ### 1 hour guided group education sessions
 
@@ -67,6 +85,10 @@ We use all the knowledge, understanding and expertise present in the classroom t
 
 Another piece of content students will be asked to make themselves through the week until next class. From just a screenshot of an app to a full song - you grow from your level with us!
 
+:::
+
+::: tip
+
 ## FREE: Biweekly workshops and jams
 
 - 1 hour workshop
@@ -74,6 +96,10 @@ Another piece of content students will be asked to make themselves through the w
 - Formats interchange
   - Acoustic
   - Electronic
+
+:::
+
+::: tip
 
 ## How to find us?
 
@@ -83,5 +109,7 @@ Another piece of content students will be asked to make themselves through the w
 Chalong, Phuket 83130
 
 https://maps.app.goo.gl/H8VjhimNCGsShnyt9
+
+:::
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31619.23403019168!2d98.33620267822933!3d7.8526906901330715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30502f11be80d1b3%3A0xc8c70cc2395f418a!2sPLACE%20COWORKING%20PHUKET!5e0!3m2!1sru!2sth!4v1734540603134!5m2!1sru!2sth" class="m-4 max-w-90vw mb-30" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

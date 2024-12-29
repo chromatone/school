@@ -49,7 +49,7 @@ async function participate() {
 
 <template lang='pug'>
 .i-la-spinner.animate-spin.m-4.text-2xl(v-if="!event")
-.flex.flex-col.p-2.max-w-45ch.gap-2(v-else)
+.flex.flex-col.p-2.max-w-45ch.gap-4.m-4(v-else)
   .text-2xl {{ event?.title }}
   .text-md {{ event?.description }}
 
