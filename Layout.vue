@@ -46,7 +46,7 @@ onClickOutside(authModal, () => {
 
   img.w-full.rounded-xl.m-2(src="/photo.jpeg" style="flex: 1 0 300px" v-if="f?.home")
 
-  content.p-2.prose.max-w-unset(style="flex: 1 1 100%")
+  content.prose.max-w-unset(style="flex: 1 1 100%")
 
   //- .flex.flex-wrap.gap-2.text-2xl.w-full
     a(href="/courses/") Courses

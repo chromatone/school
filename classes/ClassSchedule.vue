@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed } from "vue";
-import { parseISO, startOfWeek, addDays, isSameDay, format, isFirstDayOfMonth, isWeekend, getWeek, isSameMonth } from "date-fns";
+import { parseISO, startOfWeek, addDays, isSameDay, format, isFirstDayOfMonth, isWeekend, getWeek, isSameMonth, getWeekYear } from "date-fns";
 
 import { createDirectus, rest, readItems } from '@directus/sdk'
 import { useHash } from "../use/useHash";
@@ -33,11 +33,11 @@ const hash = useHash()
 </script>
 
 <template lang="pug">
-.flex.flex-col.max-w-100vw.max-h-80vh.bg-light-700.mx-4.shadow-xl.rounded-xl.my-12
+.flex.flex-col.max-w-100vw.bg-light-700.shadow-xl.my-12.p-2
   .flex.p-4
     .text-2xl.font-bold Our Schedule
     .flex-1
-    .text-lg Week {{ getWeek(Date.now()) }}
+    .text-lg Week {{ getWeek(Date.now()) }} {{ getWeekYear(Date.now()) }}
 
   .grid.gap-2.not-prose.overflow-x-scroll.font-mono.overscroll-x-contain( style="scrollbar-width: thin; grid-template-columns: 1fr 1fr 3fr 1fr 3fr 1fr 3fr;")
 

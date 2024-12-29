@@ -12,7 +12,7 @@ import ContactMe from '../contact/ContactMe.vue';
   .flex-1 
   .op-80 {{ data.length }}
 slot 
-.flex.max-w-96vw.gap-8.overflow-x-scroll.p-4.overscroll-x-contain
+.flex.max-w-100vw.gap-8.overflow-x-scroll.p-4.overscroll-x-contain
   .bg-light-800.text-xl.no-underline.rounded-xl.overflow-hidden.shadow-lg.hover-brightness-110.flex.flex-col(
     style="flex: 1 0 300px"
     v-for="program in data" :key="program"
