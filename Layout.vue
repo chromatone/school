@@ -39,13 +39,14 @@ onClickOutside(authModal, () => {
     .op-80.text-sm Place Coworking<br> 
       .op-80 Phuket, Thailand
 
-  .flex-1.p-4.flex.gap-4.items-start.flex-col(v-if="!f?.home")
+  .flex-1.p-4.flex.items-start.flex-col(v-if="!f?.home")
     .flex-1
     .text-xl.font-bold(v-if="f?.title") {{ f.title }}
+    .text-sm.op-80(v-if="f?.description") {{ f?.description }}
 
   img.w-full.rounded-xl.m-2(src="/photo.jpeg" style="flex: 1 0 300px" v-if="f?.home")
 
-  content.prose.max-w-unset(style="flex: 1 1 100%")
+  content.p-2.prose.max-w-unset(style="flex: 1 1 100%")
 
   //- .flex.flex-wrap.gap-2.text-2xl.w-full
     a(href="/courses/") Courses
