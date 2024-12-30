@@ -50,7 +50,10 @@ async function participate() {
 <template lang='pug'>
 .i-la-spinner.animate-spin.m-4.text-2xl(v-if="!event")
 .flex.flex-col.p-2.max-w-45ch.gap-4.m-4(v-else)
-  .text-2xl {{ event?.title }}
+  .flex.items-center
+    .text-2xl {{ event?.title }} 
+    .flex-1 
+    a.i-la-angle-left(href="#")
   .text-md {{ event?.description }}
 
   .text-lg(v-if="event?.date") {{ format(event?.date, 'HH:mm EEEE @ dd MMMM yyyy') }}

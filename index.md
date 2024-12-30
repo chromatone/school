@@ -13,11 +13,7 @@ const CourseList = defineClientComponent(() => import('./courses/CourseList.vue'
 
 ::: tip
 
-### Improve your live music skillset and creative media productivity while on the island
-
-:::
-
-::: tip
+### Improve your live music skillset and multimedia productivity while on the island
 
 Hello! My name is Denis Starov. I'm the author and developer of Chromatone - the Visial Music Language. I found a point where ideas of Isaac Newton meet modern technology and science. Now we can establish consistent relations between notes and colors and bring visual awareness to music analysis, performance, composition and production. The same notes across octaves, frets and bars will have the same color and even rhythms!
 
@@ -40,10 +36,6 @@ I will share my experience, help you build your own knowledge and plan of action
 ::: tip
 
 ### Prototyping efficient educational models
-
-:::
-
-::: tip
 
 While being fundamentally different, sensations converge in our brains so we can build any kinds of connections there. That's how anyone may once see sounds and music in color. That's how I studied music myself: with colorful stickers applied on the keyboard of my OP-1 and a memo cheatsheet with diagrams of all chords in basic diatonic scales to put at sight and go with all this to any rehearsal or jam place to start exploring this tonal space with other musicians.
 
@@ -83,19 +75,12 @@ We use all the knowledge, understanding and expertise present in the classroom t
 
 ### + Homework
 
-Another piece of content students will be asked to make themselves through the week until next class. From just a screenshot of an app to a full song - you grow from your level with us!
+Another piece of content students will be asked to make themselves through the week until next class. From just a screenshot of an app to a full song - you grow from your level with us! We will have 15 minutes before and after the lesson to check and discuss your homework done or to be done.
 
-:::
-
-::: tip
-
-## FREE: Biweekly workshops and jams
+### + FREE: Biweekly workshops and jams
 
 - 1 hour workshop
-- Rooftop jam session till late
-- Formats interchange
-  - Acoustic
-  - Electronic
+- Rooftop jam session till 11PM
 
 :::
 
@@ -111,5 +96,3 @@ Chalong, Phuket 83130
 https://maps.app.goo.gl/H8VjhimNCGsShnyt9
 
 :::
-
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31619.23403019168!2d98.33620267822933!3d7.8526906901330715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30502f11be80d1b3%3A0xc8c70cc2395f418a!2sPLACE%20COWORKING%20PHUKET!5e0!3m2!1sru!2sth!4v1734540603134!5m2!1sru!2sth" class=" max-w-100vw w-full" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

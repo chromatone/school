@@ -87,7 +87,7 @@ template(v-if="!user")
         rect(rx="2" stroke-width=".25" x="1" width="100" :height="24" :fill="en?.course?.program?.color") 
         QrcodeVue.rounded-1px.blur-3(:value="`https://school.chromatone.center/enroll/#${en?.id}`" x="79" y="2" :size="20" render-as="svg" :margin="2")
 
-        text(x="4" y="6.5" font-size="3.2") Creative Multimedia School @ Place Coworking
+        text(x="4" y="6.5" font-size="3.2") Visual Music School @ Place Coworking
         text(x="4" y="13.5" font-size="4.8" font-weight="bold" ) {{ en?.course?.program?.title }}  
         text(x="4" y="20"  ) 
           tspan(font-size="4.5") {{ en?.course?.level }} course 

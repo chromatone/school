@@ -11,7 +11,7 @@ import extractorPug from "@unocss/extractor-pug";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Creative Multimedia School",
+  title: "Visual Music School",
   description: "Visual Music Language in-person mixed level group education",
   transformHead({ pageData }) {
     return [

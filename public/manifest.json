@@ -1,7 +1,7 @@
 {
-	"id": "CMS-v.0.0.2",
-	"name": "Creative Multimedia School",
-	"short_name": "CMS",
+	"id": "VMS-v.0.0.2",
+	"name": "Visual Music School",
+	"short_name": "VMS",
 	"description": "Your hub for innovative multimedia education and creative collaboration",
 	"start_url": "/",
 	"background_color": "#444",
@@ -12,7 +12,7 @@
 	"handle_links": "preferred",
 	"prefer_related_applications": false,
 	"categories": [
-		"creative school",
+		"music school",
 		"creative multimedia",
 		"media school",
 		"multimedia education",

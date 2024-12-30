@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed } from "vue";
-import { parseISO, startOfWeek, addDays, isSameDay, format, isFirstDayOfMonth, isWeekend, getWeek, isSameMonth, getWeekYear } from "date-fns";
+import { parseISO, startOfWeek, addDays, isSameDay, format, isWeekend, getWeek, getWeekYear } from "date-fns";
 
 import { createDirectus, rest, readItems } from '@directus/sdk'
 import { useHash } from "../use/useHash";
@@ -30,6 +30,10 @@ const getClassesForDate = (date) =>
 
 const hash = useHash()
 
+function hasEvents(date) {
+  return classes.value && classes.value.filter((cls) => isSameDay(parseISO(cls.date), date)).length > 0 || events.value && events.value.filter((ev) => isSameDay(parseISO(ev.date), date)).length > 0
+}
+
 </script>
 
 <template lang="pug">
@@ -43,9 +47,9 @@ const hash = useHash()
 
     .rounded.font-bold.bg-gray-400.p-2.sticky.top-0.z-100(v-for="day in ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']" :key="day" :class="{ 'bg-orange-300': ['Sat', 'Sun'].includes(day) }") {{ day }}
 
-    .rounded.p-1.bg-light-50.flex.flex-col.gap-1(v-for="date in calendarDates" :key="date" :class="{ 'bg-orange-300': isSameDay(date, Date.now()), 'bg-light-900': isWeekend(date), 'op-50': classes.filter((cls) => isSameDay(parseISO(cls.date), date)).length == 0 && events.filter((ev) => isSameDay(parseISO(ev.date), date)).length == 0 }")
+    .rounded.p-1.bg-light-50.flex.flex-col.gap-1(v-for="date in calendarDates" :key="date" :class="{ 'bg-orange-300': isSameDay(date, Date.now()), 'bg-light-900': isWeekend(date), 'op-50': !hasEvents(date) }")
 
-      .text-sm.font-semibold {{ format(date, 'dd') }} {{ isFirstDayOfMonth(date) ? format(date, 'MMM') : '' }} {{ isFirstDayOfMonth(date) && isSameMonth(date, new Date(date.getFullYear(), 0, 1)) ? format(date, 'yyyy') : '' }} {{ isSameDay(date, Date.now()) ? 'Today' : '' }}
+      .text-sm.font-thin {{ format(date, 'dd') }} {{ hasEvents(date) ? format(date, 'MMM') : '' }} {{ hasEvents(date) ? format(date, 'yyyy') : '' }} {{ isSameDay(date, Date.now()) ? 'Today' : '' }}
 
       ul.flex.flex-col.gap-2(v-if="events")
         li.text-sm.rounded(v-for="ev in events.filter((ev) => isSameDay(parseISO(ev.date), date))" :key="ev.title")
