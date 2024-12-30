@@ -38,7 +38,7 @@ onMounted(async () => {
         .text-sm {{ format(ev.date, ' HH:mm EEE') }}
         .flex-1 
         .text-sm {{ format(ev.date, 'dd MMM yy') }}
-      img(v-if="ev?.cover" :src="`https://schooldb.chromatone.center/assets/${ev.cover}`")
+      img(v-if="ev?.cover" :src="`https://schooldb.chromatone.center/assets/${ev.cover}?width=400`")
       .flex.flex-col.p-2.bg-cover.bg-center(:style="{ backgroundColor: ev?.color }")
         .flex.items-start.gap-2
           .op-60 {{ ev?.title }} 
