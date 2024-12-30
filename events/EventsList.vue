@@ -38,15 +38,16 @@ onMounted(async () => {
         .text-sm {{ format(ev.date, ' HH:mm EEE') }}
         .flex-1 
         .text-sm {{ format(ev.date, 'dd MMM yy') }}
-      .flex.flex-col.p-2(:style="{ backgroundColor: ev?.course?.program?.color }")
+      img(v-if="ev?.cover" :src="`https://schooldb.chromatone.center/assets/${ev.cover}`")
+      .flex.flex-col.p-2.bg-cover.bg-center(:style="{ backgroundColor: ev?.color }")
         .flex.items-start.gap-2
-          .op-60 {{ ev?.course?.program?.title }} 
-          .px-2.py-1.bg-light-800.rounded-lg.text-xs {{ ev?.course?.level }}
-      .flex-1.text-lg.p-2.bg-light-700 {{ ev?.module?.title }}
-      .flex.flex-wrap.gap-2.items-center.p-2 
-        img.rounded-full.w-30px.h-30px(
-          v-if="ev?.course?.teacher?.avatar"
-          :src="`https://schooldb.chromatone.center/assets/${ev?.course?.teacher?.avatar}?width=30&height=30`")
-        .p-0 {{ ev?.course?.teacher?.first_name }} {{ ev?.course?.teacher?.last_name }}
+          .op-60 {{ ev?.title }} 
+          .px-2.py-1.bg-light-800.rounded-lg.text-xs.uppercase {{ ev?.type }} 
+      //- .flex-1.text-lg.p-2.bg-light-700 {{ ev?.title }}
+      //- .flex.flex-wrap.gap-2.items-center.p-2 
+      //-   img.rounded-full.w-30px.h-30px(
+      //-     v-if="ev?.course?.teacher?.avatar"
+      //-     :src="`https://schooldb.chromatone.center/assets/${ev?.course?.teacher?.avatar}?width=30&height=30`")
+      //-   .p-0 {{ ev?.course?.teacher?.first_name }} {{ ev?.course?.teacher?.last_name }}
 
 </template>

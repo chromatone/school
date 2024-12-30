@@ -36,10 +36,10 @@ onClickOutside(authModal, () => {
         .font-bold Chromatone
       .flex-1.min-h-12
       a.text-6xl.font-thin(href="/") Visual <br>Music<br> School
-      .op-80.text-md Place Coworking<br> 
+      a.op-80.text-md(href="/#how-to-find-us") Place Coworking<br> 
         .op-80 Phuket, Thailand
 
-    .flex-1.p-4.flex.items-start.flex-col.m-2.rounded-xl.z-9(v-if="!f?.home" :style="{ backgroundColor: f?.color }")
+    a.flex-1.p-4.flex.items-start.flex-col.m-2.rounded-xl.z-9(v-if="!f?.home" href="#" :style="{ backgroundColor: f?.color }")
       .flex-1
       .text-xl.font-bold(v-if="f?.title") {{ f.title }}
       .text-sm.op-80(v-if="f?.description") {{ f?.description }}

@@ -2,7 +2,7 @@
 import { computedAsync, useStorage } from '@vueuse/core';
 import { useHash } from '../use/useHash';
 import { createDirectus, createItem, readItem, rest } from '@directus/sdk';
-import { format, } from 'date-fns';
+import { format, isFuture, } from 'date-fns';
 import { reactive } from 'vue';
 import parsePhoneNumber from 'libphonenumber-js'
 
@@ -53,7 +53,6 @@ async function participate() {
   .flex.items-center
     .text-2xl {{ event?.title }} 
     .flex-1 
-    a.i-la-angle-left(href="#")
   .text-md {{ event?.description }}
 
   .text-lg(v-if="event?.date") {{ format(event?.date, 'HH:mm EEEE @ dd MMMM yyyy') }}
@@ -62,7 +61,7 @@ async function participate() {
   .text-md.font-bold Duration: {{ Number(event?.duration) }} hr
   .text-md.font-bold Price: {{ event?.price > 0 ? `${event?.price}THB` : 'FREE' }}
 
-  form.flex.flex-col.gap-2.my-8.bg-dark-50.bg-op-20.p-2.rounded-lg(@submit.prevent="participate()" v-if="!participating[hash]")
+  form.flex.flex-col.gap-2.my-8.bg-dark-50.bg-op-20.p-2.rounded-lg(@submit.prevent="participate()" v-if="!participating[hash] && isFuture(event?.date)")
     .text-xl.font-bold Participate
     label(for="name") Your full name*
     input#name.p-2.rounded.shadow(type="text" required placeholder="John Doe" v-model="participation.name")
@@ -74,6 +73,6 @@ async function participate() {
     .text-sm.op-90.flex.flex-caol.gap-1(v-if="errors.length") 
       .p-1.bg-red-300.rounded(v-for="err in errors" :key="err") {{ err }}
 
-  .p-4.bg-orange-200(v-else)
+  .p-4.bg-orange-200(v-if="participating[hash]")
     .text-xl Thanks for your application for the event! See you there!
 </template>
