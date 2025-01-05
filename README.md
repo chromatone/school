@@ -26,7 +26,7 @@ And then I realized how valuable those unique moments of joy are when people pla
 
 Around year 2017 it all started as web development excercise app just to calculate the frequency of note A 40th octave and compare it to light spectrum. After I saw red A and how octave fits with color circle, I never stopped developing this project further. It has grown into a web-site, a sticker shop, a video-course collaboration with SkillBox, a book in the making. Now Chromatone is quite a developed research with plenty of theory and practice materials ready to be shared with people around.
 
-Online tutorship and courses are not that effective as we are so used to videos with no interaction with other students. It is a crucial part of real study. As a grownup you want effective education for student of any level of starting and achievable knowledge and skill. And I want to explore this field more by starting to grow a creative multimedia school with 4 programs to provide valuable knowledge and skills to both local and global communities of music explorers.
+Online tutorship and courses are not that effective as we are so used to videos with no interaction with other students. It is a crucial part of real study. As a grownup you want effective education for student of any level of starting and achievable knowledge and skill. And I want to explore this field more by starting to grow Visual Music School with 4 programs to provide valuable knowledge and skills to both local and global communities of music explorers.
 
 Dynamic group education is an important part of study process as it provides opportunities to also ask questions and explain something to others so that you better understand the subject yourself.
 

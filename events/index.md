@@ -5,11 +5,12 @@ color: hsl(160deg,60%,60%)
 ---
 
 <script setup>
-import { useHash } from '../use/useHash';
 import { defineClientComponent } from 'vitepress'
-const EventPage = defineClientComponent(() => import('./EventPage.vue'))
 
-const EventList = defineClientComponent(()=>import('./EventsList.vue'))
+const EventPage = defineClientComponent(() => import('./EventPage.vue'))
+const EventList = defineClientComponent(() => import('./EventsList.vue'))
+
+import { useHash } from '../use/useHash'
 
 const hash = useHash()
 
@@ -17,4 +18,4 @@ const hash = useHash()
 
 <EventPage v-if="hash" />
 
-<EventList v-if="!hash" />
+<EventList v-else />

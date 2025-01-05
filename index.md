@@ -3,12 +3,12 @@ home: true
 ---
 
 <script setup>
-import ClassSchedule from './classes/ClassSchedule.vue'
 import ProgramsList from './programs/ProgramsList.vue'
 import YoutubeEmbed from './use/YoutubeEmbed.vue'
 
 import { defineClientComponent } from 'vitepress'
 const CourseList = defineClientComponent(() => import('./courses/CourseList.vue'))
+const ClassSchedule = defineClientComponent(() => import('./classes/ClassSchedule.vue'))
 </script>
 
 ::: tip

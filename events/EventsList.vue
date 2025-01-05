@@ -34,6 +34,7 @@ onMounted(async () => {
   transition-group(name="fade")
     .i-la-spinner.text-4xl.animate-spin.absolute(v-if="events.length == 0" key="spinner")
     a.no-underline.shadow-lg.flex.flex-col.rounded-xl.transition(v-for="ev in events" :key="ev.id" :href="`#${ev.id}`" style="flex: 1 0 220px" :class="{ [hash == ev.id ? 'bg-orange-200' : 'bg-light-200']: true }")
+      img(v-if="ev?.poster" :src="`https://schooldb.chromatone.center/assets/${ev.poster}?width=400`")
       .flex.w-full.font-mono.p-2
         .text-sm {{ format(ev.date, ' HH:mm EEE') }}
         .flex-1 
@@ -42,6 +43,7 @@ onMounted(async () => {
       .flex.flex-col.p-2.bg-cover.bg-center(:style="{ backgroundColor: ev?.color }")
         .flex.items-start.gap-2
           .op-60 {{ ev?.title }} 
+          .p-0 {{ Number(ev?.duration) }}&nbsp;hr
           .px-2.py-1.bg-light-800.rounded-lg.text-xs.uppercase {{ ev?.type }} 
       //- .flex-1.text-lg.p-2.bg-light-700 {{ ev?.title }}
       //- .flex.flex-wrap.gap-2.items-center.p-2 
