@@ -43,7 +43,7 @@ function hasEvents(date) {
     .flex-1
     .text-lg Week {{ getWeek(Date.now()) }} {{ getWeekYear(Date.now()) }}
 
-  .grid.gap-2.not-prose.overflow-x-scroll.font-mono.overscroll-x-contain( style="scrollbar-width: thin; grid-template-columns: 1fr 1fr 3fr 1fr 3fr 1fr 3fr;")
+  .grid.gap-2.not-prose.overflow-x-scroll.font-mono.overscroll-x-contain( style="scrollbar-width: thin; grid-template-columns: 1fr 1fr 3fr 1fr 1fr 1fr 3fr;")
 
     .rounded.font-bold.bg-gray-400.p-2.sticky.top-0.z-100(v-for="day in ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']" :key="day" :class="{ 'bg-orange-300': ['Sat', 'Sun'].includes(day) }") {{ day }}
 
