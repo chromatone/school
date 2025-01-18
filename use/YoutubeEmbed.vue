@@ -30,7 +30,8 @@ const loaded = ref(false)
 
 <style lang="postcss" scoped>
 .iframe-container {
-  max-width: 65ch;
+  width: 100%;
+  max-width: 55ch;
   overflow: hidden;
   /* 16:9 aspect ratio */
   padding-top: 34%;

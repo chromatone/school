@@ -17,15 +17,15 @@ slot
     style="flex: 1 0 300px"
     v-for="program in data" :key="program"
     )
-    a.p-3.no-underline(:style="{ backgroundColor: program?.color }" :href="`/programs/${program.slug}/`" )
-      .text-8xl.font-thin.op-80 {{ program.slug }}
+    .p-3.no-underline(:style="{ backgroundColor: program?.color }"  )
+      a.text-8xl.font-thin.op-80(:href="`/programs/${program.slug}/`") {{ program.slug }}
 
     .font-normal.no-underline.flex.flex-col.overflow-hidden.bg-light-300(v-for="course in program?.courses" :key="course.id" ) 
       a.no-underline.flex.flex-wrap.items-baseline.gap-2.pt-4.px-2.pb-2.relative(
         :href="`/courses/#${course.id}`"
         :style="{ backgroundColor: course?.program?.color }") 
 
-        a.no-underline.text-2xl.font-bold(:href="`/programs/${program.slug}/`" ) {{ program.title }}
+        .no-underline.text-2xl.font-bold {{ program.title }}
 
         .text-2xl.mr-8.line-height-1em.op-90.font-thin <b>{{ course?.level }}</b> course
 

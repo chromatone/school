@@ -28,10 +28,52 @@ I will share my experience, help you build your own knowledge and plan of action
 :::
 
 <YoutubeEmbed class="mx-2" video="34Sg5JMlE10" />
-
+<!-- 
 <ProgramsList />
 
-<ClassSchedule />
+<ClassSchedule /> 
+-->
+
+::: tip
+
+## Group classes every Tuesday
+
+### Sessions start at 11:00, 12:45 and 14:30
+
+- 4-8 students per class
+- interactive lesson
+- hands-on practice
+- creative homework
+
+You can enroll in a 1 month course or take one class to try.
+
+- **800 THB** per class
+- **2400 THB** per course (4 classes)
+
+### Guided education sessions
+
+### Presentation - 30 min
+
+Tightly packed prepared comprehensive overview of a given topic with a slideshow and interactive examples. This part may be recorded and published online for students later reference. Students write down their questions and ideas to share in the next part.
+
+### Discovery - 30 min
+
+Students ask questions and verify their model of given topic with the teacher and other students. Everyone is encouraged to find something useful for creative multimedia project, that we'll be creating in the next part.
+
+### Performance - 30 min
+
+We use all the knowledge, understanding and expertise present in the classroom to create some short piece of content, that will incorporate just studied wide topics in relation to creative processes.
+
+### + Homework
+
+Another piece of content students will be asked to make themselves through the week until next class. From just a screenshot of an app to a full song - you grow from your level with us! We will have 15 minutes before and after the lesson to check and discuss your homework done or to be done.
+
+### + FREE: Biweekly workshops and jams
+
+- 1 hour workshop
+- Rooftop jam session till 11PM
+
+:::
 
 ::: tip
 
@@ -46,41 +88,6 @@ Around year 2017 it all started as web development excercise app just to calcula
 Online tutorship and video courses are not really that effective as we are quite used to watch videos with no interaction with others. But interactions with other students inside and outside the classroom is integral part of study and growth. As an adult you want effective education for students of any level of prior knowledge and achievable knowledge and skills for all. And I want to explore this field more by starting to grow a creative multimedia school with 4 programs to provide valuable knowledge and skills to both local and global communities of music explorers.
 
 Dynamic group education is an important part of study process as it provides opportunities to also ask questions and explain something to others so that you better understand the subject yourself.
-
-:::
-
-::: tip
-
-## Weekly classes
-
-So, here's what we have now:
-
-- 1 month short courses
-- Weekly 1 hour group classes with creative homework
-- 4-8 students per course
-
-### 1 hour guided group education sessions
-
-### Presentation - 20 min
-
-Tightly packed prepared comprehensive overview of a given topic with a slideshow and interactive examples. This part may be recorded and published online for students later reference. Students write down their questions and ideas to share in the next part.
-
-### Discovery - 20 min
-
-Students ask questions and verify their model of given topic with the teacher and other students. Everyone is encouraged to find something useful for creative multimedia project, that we'll be creating in the next part.
-
-### Performance - 20 min
-
-We use all the knowledge, understanding and expertise present in the classroom to create some short piece of content, that will incorporate just studied wide topics in relation to creative processes.
-
-### + Homework
-
-Another piece of content students will be asked to make themselves through the week until next class. From just a screenshot of an app to a full song - you grow from your level with us! We will have 15 minutes before and after the lesson to check and discuss your homework done or to be done.
-
-### + FREE: Biweekly workshops and jams
-
-- 1 hour workshop
-- Rooftop jam session till 11PM
 
 :::
 
