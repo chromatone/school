@@ -3,12 +3,12 @@ home: true
 ---
 
 <script setup>
-import ProgramsList from './programs/ProgramsList.vue'
+// import ProgramsList from './programs/ProgramsList.vue'
 import YoutubeEmbed from './use/YoutubeEmbed.vue'
 
 import { defineClientComponent } from 'vitepress'
-const CourseList = defineClientComponent(() => import('./courses/CourseList.vue'))
-const ClassSchedule = defineClientComponent(() => import('./classes/ClassSchedule.vue'))
+// const CourseList = defineClientComponent(() => import('./courses/CourseList.vue'))
+// const ClassSchedule = defineClientComponent(() => import('./classes/ClassSchedule.vue'))
 </script>
 
 ::: tip
@@ -38,7 +38,7 @@ I will share my experience, help you build your own knowledge and plan of action
 
 ## Group classes every Tuesday
 
-### Sessions start at 11:00, 12:45 and 14:30
+### Sessions start at 11:00 and 12:45
 
 - 4-8 students per class
 - interactive lesson
