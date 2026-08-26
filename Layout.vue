@@ -29,8 +29,8 @@ onClickOutside(authModal, () => {
     .i-la-user(v-else)
   transition(name="fade")
     AuthForm.fixed.top-4.right-4.z-90(v-show="auth" ref="authModal")
-  .flex.flex-wrap.bg-light-400.z-20.w-full
-    .flex-1.z-9.p-4.bg-orange.m-2.rounded-xl.flex.flex-col.gap-1.max-w-50ch
+  .flex.flex-wrap.bg-light-400.z-20.w-full.gap-2.p-2
+    .flex-1.z-9.p-4.bg-orange.rounded-xl.flex.flex-col.gap-1.max-w-50ch
       a.flex.gap-2.items-center(href="https://chromatone.center/" target="_blank") 
         img.w-6.h-6(src="/smooth.svg")
         .font-bold Chromatone
@@ -43,8 +43,8 @@ onClickOutside(authModal, () => {
       .flex-1
       .text-xl.font-bold(v-if="f?.title") {{ f.title }}
       .text-sm.op-80(v-if="f?.description") {{ f?.description }}
-
-    img.w-full.rounded-xl.m-2.z-11(src="/photo.jpeg" style="flex: 1 0 300px" v-if="f?.home")
+    .rounded-xl.overflow-hidden(style="flex: 1 0 300px")
+      img.z-11(src="/photo.jpeg"  v-if="f?.home")
 
   content.prose.max-w-unset.content.bg-light-300.z-10(style="flex: 1 1 100%")
 

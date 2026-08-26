@@ -34,7 +34,7 @@ I will share my experience, help you build your own knowledge and plan of action
 <ClassSchedule /> 
 -->
 
-::: tip
+<!-- ::: tip
 
 ## Group classes every Tuesday
 
@@ -73,9 +73,9 @@ Another piece of content students will be asked to make themselves through the w
 - 1 hour workshop
 - Rooftop jam session till 11PM
 
-:::
+::: -->
 
-::: tip
+<!-- ::: tip
 
 ### Prototyping efficient educational models
 
@@ -89,7 +89,7 @@ Online tutorship and video courses are not really that effective as we are quite
 
 Dynamic group education is an important part of study process as it provides opportunities to also ask questions and explain something to others so that you better understand the subject yourself.
 
-:::
+::: -->
 
 ::: tip
 
